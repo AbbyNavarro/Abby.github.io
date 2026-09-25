@@ -1,404 +1,995 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Abegail L. Navarro Portfolio</title>
-      <meta name="description" content="Abegail L. Navarro portfolio">
-      <meta name="keywords" content="Abegail L. Navarro">
-      <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
-      <meta property="og:title" content="Abegail L. Navarro">
-      <meta property="og:image" content="">
-      <meta property="og:url" content="">
-      <meta property="og:site_name" content="">
-      <meta property="og:description" content="">
-      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="css/animate.css">
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Particle jS File -->
-      <link href="particles.js-master/css/style.css" rel="stylesheet">
-      <style media="screen">
-         #project-table{
-         background-color: #fff;
-         }
-         #particles-js{
-         width: 100%;
-         height: 77%;
-         background-color: transparent;
-         position: absolute;
-         top: 0px;
-         left: 0px;
-         z-index: 1;
-         }
-         #resume_button:hover{
-         background-color: #fff;
-         }
-         .cert:hover{
-         cursor: pointer;
-         box-shadow: 4px 4px #777;
-         }
-         .cert{
-            height:250px !important;
-            width: 100% !important;
-         }
-         .modal-body{
-         max-height: 0px;
-         }
-         .modal-content{
-         max-height: 0px;
-         box-shadow: none;
-         border:none;
-         margin-top: 25%;
-         }
-         #video_form{
-         width: 0px;
-         height: 0px;
-         position: absolute;
-         top: 0px;
-         left: 0px;
-         z-index: 55555;
-         background:rgba(0,0,0,0.9);
-         visibility: hidden;
-         }
-         #video_form:target{
-         width: 100%;
-         height: 100vh;
-         visibility: visible;
-         overflow-y:hidden;
-         animation: vid1;
-         animation-duration: 2s;
-         }
-         @webkit-keyframes vid1 {
-         from {background:rgba(0,0,0,0);}
-         to {background:rgba(0,0,0,0.9);}
-         }
-         @keyframes vid1 {
-         from {background:rgba(0,0,0,0);}
-         to {background:rgba(0,0,0,0.9);}
-         }
-      </style>
-   </head>
-   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
-      <div id="video_form" class="section-padding">
-         <div class="container" >
-            <div class="row" >
-               <a href=""><span style="font-size:25px;color:#fff;z-index:555555;position:relative;"><i class="pull-right fa fa-close"> close</i></span></a>
-               <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x7ushww" width="100%" height="100%" allowfullscreen > </iframe>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>THE UNION // MARK & ABEGAIL WEDDING EDITION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #0f0f0f;
+            --paper: #fcfcfc;
+            --ink: #111111;
+            --ink-dim: rgba(17, 17, 17, 0.78);
+            --white: #ffffff;
+            --white-dim: rgba(255, 255, 255, 0.85);
+            --dark-card: rgba(22, 22, 22, 0.95);
+            --light-card: rgba(245, 245, 243, 0.95);
+            --hairline-dark: rgba(0, 0, 0, 0.12);
+            --hairline-light: rgba(255, 255, 255, 0.15);
+        }
+
+        html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            font-weight: 500;
+            background: var(--bg-light);
+            color: var(--ink);
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        p { font-weight: 500; }
+
+        h1, h2, h3, .display-serif { font-family: 'Playfair Display', serif; }
+
+        .rule-dark { height: 1px; background: linear-gradient(90deg, transparent, var(--hairline-dark) 20%, var(--hairline-dark) 80%, transparent); width: 100%; }
+        .rule-light { height: 1px; background: linear-gradient(90deg, transparent, var(--hairline-light) 20%, var(--hairline-light) 80%, transparent); width: 100%; }
+
+        .masthead { text-align: center; padding: 60px 20px; }
+        .masthead h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: 0.01em;
+        }
+        .masthead .kicker {
+            letter-spacing: 0.3em;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .masthead .names { margin-top: 14px; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 2.3rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .card-dark {
+            background: var(--dark-card);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--hairline-light);
+            border-radius: 4px;
+            padding: 40px;
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .card-light {
+            background: var(--light-card);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--hairline-dark);
+            border-radius: 4px;
+            padding: 40px;
+            color: var(--ink);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .accent-label { font-size: 0.88rem; letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase; }
+        .card-dark .accent-label { color: var(--white-dim); }
+        .card-light .accent-label, .accent-label-ink { color: var(--ink-dim); }
+
+        .photo-frame {
+            background: #ffffff;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 12px;
+            border: 1px solid var(--hairline-dark);
+            border-radius: 4px;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .photo-frame:hover { 
+            border-color: rgba(0,0,0,0.4); 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        .photo-frame img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1) brightness(0.96);
+            transition: filter 0.5s ease;
+        }
+        .photo-frame:hover img {
+            filter: grayscale(0%) contrast(1.02) brightness(1);
+        }
+        .photo-caption { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic; font-size: 1.05rem; text-align: center; margin-top: 12px; color: var(--ink-dim); }
+
+        .waypoint-btn-dark {
+            display: block;
+            width: 100%;
+            border: 1px solid var(--white-dim);
+            padding: 13px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            background: transparent;
+            color: var(--white);
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+        .waypoint-btn-dark:hover { background: var(--white); color: #0a0a0a; transform: translateY(-1px); }
+
+        .waypoint-btn-light {
+            display: block;
+            width: 100%;
+            border: 1px solid var(--ink);
+            padding: 13px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            background: transparent;
+            color: var(--ink);
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+        .waypoint-btn-light:hover { background: var(--ink); color: #ffffff; transform: translateY(-1px); }
+
+        .timeline-line-dark { border-left: 1px solid var(--hairline-dark); }
+        .timeline-line-light { border-left: 1px solid var(--hairline-light); }
+        .timeline-dot { width: 9px; height: 9px; border-radius: 50%; }
+
+        /* Attire Instagram-style tile grid */
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            border: 1px solid var(--hairline-dark);
+            padding: 4px;
+            background: var(--hairline-dark);
+        }
+        @media (max-width: 640px) {
+            .ig-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .ig-tile {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #e5e5df;
+            cursor: pointer;
+        }
+        .ig-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1) brightness(0.96);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .ig-tile:hover img {
+            filter: grayscale(0%) contrast(1.02) brightness(1);
+            transform: scale(1.06);
+        }
+
+        /* Lightbox Carousel Modal */
+        #lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(5, 5, 5, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        #lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 72vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .lightbox-caption {
+            margin-top: 16px;
+            color: rgba(255,255,255,0.92);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px;
+            line-height: 1;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .lightbox-close:hover { opacity: 1; }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            font-size: 1.2rem;
+        }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-prev { left: -70px; }
+        .lightbox-next { right: -70px; }
+        @media (max-width: 768px) {
+            .lightbox-prev { left: 10px; background: rgba(0,0,0,0.5); }
+            .lightbox-next { right: 10px; background: rgba(0,0,0,0.5); }
+            .lightbox-close { top: -45px; right: 10px; }
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            background: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), visibility 1.2s ease;
+        }
+        #preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        body.preloading { overflow: hidden; }
+
+        .preloader-inner {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .preloader-monogram {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(3.2rem, 8vw, 5rem);
+            color: #ffffff;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            animation: pulseGlow 2.5s infinite ease-in-out;
+        }
+
+        .preloader-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 28px;
+        }
+
+        .preloader-line {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .preloader-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            animation: shimmerBar 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes shimmerBar {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.85; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); text-shadow: 0 0 30px rgba(255,255,255,0.25); }
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--hairline-dark);
+        }
+
+        /* RSVP Confirmation Modal */
+        #rsvp-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10001;
+            background: rgba(5, 5, 5, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+            padding: 24px;
+        }
+        #rsvp-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .rsvp-card {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            background: var(--paper);
+            border: 1px solid var(--hairline-dark);
+            border-radius: 6px;
+            padding: 44px 38px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            transform: translateY(14px);
+            transition: transform 0.35s ease;
+        }
+        #rsvp-modal.active .rsvp-card { transform: translateY(0); }
+        .rsvp-kicker {
+            letter-spacing: 0.3em;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+        }
+        .rsvp-name {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 2.1rem;
+            color: var(--ink);
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+        .rsvp-sub {
+            font-size: 1.05rem;
+            color: var(--ink-dim);
+            margin-bottom: 26px;
+        }
+        .rsvp-field-label {
+            display: block;
+            text-align: left;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+            margin-bottom: 8px;
+        }
+        #rsvp-select {
+            width: 100%;
+            padding: 13px 14px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            border: 1px solid var(--ink);
+            border-radius: 3px;
+            background: #ffffff;
+            color: var(--ink);
+            margin-bottom: 22px;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='%23111111' stroke-width='1.6' fill='none' fill-rule='evenodd'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+        .rsvp-submit-btn {
+            width: 100%;
+            border: 1px solid var(--ink);
+            padding: 14px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            font-size: 0.9rem;
+            background: var(--ink);
+            color: #ffffff;
+            border-radius: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .rsvp-submit-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+        .rsvp-submit-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+        .rsvp-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: var(--ink-dim);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 6px;
+        }
+        .rsvp-close:hover { color: var(--ink); }
+        .rsvp-confirm-icon {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+        .rsvp-confirm-text {
+            font-size: 1.15rem;
+            color: var(--ink-dim);
+            line-height: 1.6;
+        }
+        .rsvp-edit-link {
+            display: inline-block;
+            margin-top: 18px;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--ink-dim);
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body class="preloading">
+
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-monogram">Mark &amp; Abegail</div>
+            <div class="preloader-line"></div>
+            <p class="mt-6 text-sm uppercase tracking-[0.3em] text-neutral-300 font-sans">Preparing Celebration...</p>
+        </div>
+    </div>
+
+    <div id="lightbox-modal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" title="Close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="changeSlide(-1)" title="Previous">&#10094;</button>
+            <button class="lightbox-nav lightbox-next" onclick="changeSlide(1)" title="Next">&#10095;</button>
+            <img id="lightbox-img" src="" alt="Full-size attire preview">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- RSVP Confirmation Modal: only ever shown when the URL's ?rsvp= slug matches an invitee -->
+    <div id="rsvp-modal">
+        <div class="rsvp-card">
+            <button class="rsvp-close" onclick="closeRsvpModal()" title="Close">&times;</button>
+
+            <div id="rsvp-form-view">
+                <p class="rsvp-kicker">You're Invited</p>
+                <p class="rsvp-name" id="rsvp-guest-name">&nbsp;</p>
+                <p class="rsvp-sub">Kindly confirm your attendance for our wedding celebration.</p>
+
+                <label class="rsvp-field-label" for="rsvp-select">Will you be attending?</label>
+                <select id="rsvp-select">
+                    <option value="" disabled selected>Choose an answer&hellip;</option>
+                    <option value="yes">Yes, I'll be there</option>
+                    <option value="no">No, I can't make it</option>
+                </select>
+
+                <button class="rsvp-submit-btn" id="rsvp-submit-btn" onclick="submitRsvp()">Confirm RSVP</button>
+                <p id="rsvp-error" style="display:none; color:#b00020; font-size:0.9rem; margin-top:14px;"></p>
             </div>
-         </div>
-      </div>
-      <div id="particles-js">
-      </div>
-      <div class="header">
-         <div class="bg-color" id="bgCLr">
-            <header id="main-header">
-               <nav class="navbar navbar-default navbar-fixed-top">
-                  <div class="container">
-                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MarkMenu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"></a>
-                     </div>
-                     <div class="collapse navbar-collapse" id="MarkMenu">
-                        <ul class="nav navbar-nav navbar-right navbar-border">
-                           <li><a href="https://abbynavarro.github.io/Abby.github.io/Resume/AbegailNavarro_Resume.pdf" target="_blank"><button id="resume" class="btn btn-sm btn-primary"><i class="fa fa-book"></i> View Resume</button></a></li>
-                           <li class="active"><a href="#main-header">Home</a></li>
-                           <li><a href="#about">About me</a></li>
-                           <li><a href="#portfolio">Portfolio</a></li>
-                           <li><a href="#contact">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </nav>
-            </header>
-            <div class="wrapper" >
-               <div class="container" >
-                  <div class="row" >
-                     <div class="col-md-12 wow fadeIn delay-05s">
-                        <div class="banner-text">
-                           <center>
-                              <img src="img/me.jpg" style="object-fit:cover;width:250px;height:305px;border-radius:250%;border:solid 1px #000;" alt="">
-                              <br/>
-                              <br>
-                              <h2 style=" text-shadow: 2px 2px #ace;font-family: Monaco;" class="anim">Abegail L. Navarro</h2><br>
-                              BS Aviation Information Technology<br/>
-                           </center>
-                        </div>   
-                     </div>
-                  </div>
-               </div>
+
+            <div id="rsvp-confirm-view" style="display:none;">
+                <p class="rsvp-confirm-icon">Thank You</p>
+                <p class="rsvp-name" id="rsvp-confirm-name">&nbsp;</p>
+                <p class="rsvp-confirm-text" id="rsvp-confirm-text"></p>
+                <button id="rsvp-edit-btn" class="rsvp-edit-link" onclick="editRsvp()">Change my response</button>
             </div>
-         </div>
-      </div>
-      <section id="about" class="section-padding wow fadeIn delay-05s">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6 text-left">
+        </div>
+    </div>
 
-
-                  <h2 class="title-text">
-                     WORK EXPERIENCES
-                  </h2>
-                  <hr>
-                  <br/>
-                  Golden Arches Developmeny Corp. <br>
-                  McDonald's-FTI <br>
-                  Mayor Tanyang Ave, Taguig, 1630 Metro Manila <br>
-                  (Service Crew - 2016) <br><br>
-                  
-                  Topserve Service Solutions, Inc. <br>
-                  St. Luke's Medical Center - BGC <br>
-                  (A&N Building, Kamagong, Makati, Metro Manila <br>
-                  Admin Assistant-June 2018-October 2018) <br> <br>
-                  
-                  Telus International <br>
-                  McWest Blvd, Taguih, 1634 Metro Manila <br>
-                  (Customer Service Representative - October 2018- November 2020 <br>
-                  Chat/Email/Voice Support) <br><br>
-                  
-                  KMC Solutions <br>
-                  PB Tech LLC & Advisory <br>
-                  (Customer Service Representative<br>
-                  July 16, 2021 - Present )<br>
-                  <br/>
-                  <br/>
-               </div>
-               <div class="col-md-6 text-left">
-                  <div class="about-text">
-                     <p>
-                        Full Name: Abegail L. Navarro<br/>
-                        Age:24<br/>
-                        Gender: Female<br/>
-                        Hobbies/interest: Layout Designing,Reading,Singing,Dancing
-
-                        <br/>
-                        <br/>
-                        <br/>
-                     <ul class="abt-list">
-                        <li>Skilled and able to work with the ff.</li>
-                        - Detail oriented <br>
-                        - Data gathering and Analysis</br>
-                        - Document Making(System support documents)<br/>
-                        - GIT <br/>
-                        - Microsoft Office 365</br>
-                        - Basic PC troubleshooting and setup<br/>
-                        - Adobe photoshop (basic)<br/>
-                        <br/>
-                     </ul>
-                     <br/>
-                     <br/>
-                     <br/>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I believe that education is the ability to listen to almost everything without losing your temper or your self-confidence.
-                     I know that there is always a lesson and knowledge waiting for me to acquire, so I'll keep exploring and do the best that I can and learn in every step of the way.
-                     </p>
-                     <p>&nbsp;</p>
-                  </div>
-               </div>
+    <!-- SECTION 3: WHITE (Cards: Story, Notices, Attire) -->
+<section class="w-full bg-[#fafafa] text-[#111111] py-20 px-6 lg:px-16 border-t border-b border-neutral-200">
+        <!-- SECTION 1: WHITE (Masthead) -->
+<header class="w-full bg-[#ffffff] text-[#111111] pt-12 pb-16 px-6 relative border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto">
+        <div class="masthead">
+            <p class="kicker text-neutral-800">The Union</p>
+            <h1 class="text-[#111111]">Mark &amp; Abegail</h1>
+            <p class="names text-neutral-700">A Celebration of Marriage</p>
+        </div>
+        <div class="rule-dark"></div>
+    </div>
+</header>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <article class="card-light flex flex-col justify-between" data-aos="fade-up">
+            <div>
+                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Our Love Story</h3>
+                <p class="text-lg text-neutral-800 mt-4 leading-relaxed">We met in 2021 with no clue that we would end up with each other. Everything felt natural, starting as friends, movie buddies, and endless conversations.</p>
             </div>
-         </div>
-      </section>
-      <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-               </div>
-               <div class="col-md-12">
-
-                  <div class="row">
-                     <div class="col-md-4 col-sm-4 padding-right-zero">
-                        <a href="img/assoc.jpg" data-toggle="lightbox"><img src="img/assoc.jpg" class="img-responsive cert" alt="cert1"></a>
-                     </div>
-                     <div class="col-md-4 col-sm-4 padding-right-zero">
-                        <a href="img/BS.jpg" data-toggle="lightbox"><img src="img/BS.jpg" class="img-responsive cert" alt="cert1"></a>
-                     </div>
-
-                     <div class="col-md-4 col-sm-4 padding-right-zero">
-                        <a href="img/amad.jpg" data-toggle="lightbox"><img src="img/amad.jpg" class="img-responsive cert" ></a>
-                     </div>
-                  </div>
-
-
-                  <div class="row">
-                  <div class="col-md-4 col-sm-4 padding-right-zero">
-                     <a href="img/telus.png" data-toggle="lightbox"><img src="img/telus.png" class="img-responsive cert" ></a>
-                  </div>
-
-                  <div class="col-md-4 col-sm-4 padding-right-zero">
-                     <a href="img/juul.jpg" data-toggle="lightbox"><img src="img/juul.jpg" class="img-responsive cert" ></a>
-                  </div>
-
-                  </div>
-
-
-
-               </div>
+            <div class="mt-8 pt-4 border-t border-neutral-200">
+                <p class="accent-label text-neutral-700">Established 2021</p>
             </div>
-         </div>
-      </section>
-      <!--PROJECTS EXP SECTION-->
-      <section id="projects" class="section-padding wow fadeIn delay-05s">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <center><span style="color:#fff;font-size:20px;">Project Experiences</span></center>
-                  </br>
-                  <div class="row" style="overflow-x:scroll;">
-                     <table id="project-table" class="table" style="text-align:center;">
-                        <thead style="font-weight:bold;background-color:#777;color:#fff;">
-                           <tr>
-                              <td>Project Type</td>
-                              <td>Project Name</td>
-                              <td>Project Description</td>
-                              <td>
-                                 <center>---</center>
-                              </td>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>Thesis</td>
-                              <td>Robo Car</td>
-                              <td>A robot car programmed using Arduino and C Lang. to detect black lines as route and sensor</td>
-                              <td><a href="projects/robot.mp4" target="blank_">Click to view project demo</a></td>
+        </article>
 
-                           </tr>
-                           <tr>
-
-                              <td>System Document making</td>
-                              <td>HRMS Docs</td>
-                              <td>I became part of a freelance team and my duty is creating system document support diagrams such as 
-                              System Flowchart,
-                              SRS,
-                              Use Case Diagram,
-                              DFD
-                              </td>
-                              <td></td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </div>
+        <article class="card-light flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div>
+                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Official Notices</h3>
+                <div class="space-y-3 mt-4 text-neutral-900">
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Date&nbsp;</span> &nbsp;January 26, 2027</p>
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Time&nbsp;</span> &nbsp;4:00 PM</p>
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Venue</span> &nbsp;Lola Café, S'Maison</p>
+                </div>
             </div>
-         </div>
-      </section>
-      <section id="contact" class="section-padding wow fadeIn delay-05s">
-
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="contact-sec text-center anim">
-                     <h2>Want To <span class="deco">Hire</span> Me?</h2>
-                     <p></p>
-                  </div>
-               </div>
-               <div class="col-md-8 col-md-push-2">
-                  <center style="color:#fff;">
-                     Email: <a style="color:#00f7ff;" href = "mailto: dsam373@gmail.com">Click here</a><br/>
-                     Contact number: <span style="color:#00f7ff;">09182757938</span>
-                  </center>
-               </div>
+            <div class="mt-8 pt-4 border-t border-neutral-200 text-center">
+                <button onclick="document.getElementById('venue-section').scrollIntoView({behavior: 'smooth'})" class="waypoint-btn-light">View Venue Map</button>
             </div>
-         </div>
-      </section>
-      <footer class="footer-2 text-center-xs bg--white"  style="background-color:#fff;">
-         <div class="container">
-            <!--end row-->
-            <div class="row" >
-               <br/>
-               <br/>
-               <br/>
-               <div class="col-md-6">
-                  <div class="footer">
-                     <div class="credits">
-                        </br>
-                        
-                           <br/>
+        </article>
 
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6 text-right">
-                  <ul class="social-list">
-                     <center>
-                        <li>
-                           <h3>Powered by:</h3>
-                        </li>
-                        <li>&nbsp; </li>
-                        <li>
-                           <a href="#">
-                           <img src="img/html.svg" class="footerimg" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <img src="img/JQuery.webp" class="footerimg" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <img src="img/js.png" class="footerimg" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <img src="img/bootstrap.png" class="footerimg" alt="">
-                           </a>
-                        </li>
-                     </center>
-                  </ul>
-               </div>
-
+        <article class="card-light flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+            <div>
+                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Attire Guidelines</h3>
+                <div class="space-y-3 mt-4 text-neutral-900">
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Theme</span> &nbsp;All Black, Formal</p>
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Ladies</span> &nbsp;Black long dress / Polo short sleeve &amp; long skirt</p>
+                    <p class="text-lg"><span class="accent-label accent-label-ink">Gentlemen</span> &nbsp;Black formal attire</p>
+                </div>
             </div>
-            <br/>
-            <br/>
-            <br/>
-            <!--end row-->
-         </div>
-      </footer>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery.easing.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.bxslider.min.js"></script>
-      <script src="js/wow.js"></script>
-      <script src="js/custom.js"></script>
-      <script src="contactform/contactform.js"></script>
-      <!-- scripts -->
-      <script src="particles.js-master/particles.js"></script>
-      <script src="particles.js-master/js/app.js"></script>
-      <!-- stats.js -->
-      <script src="particles.js-master/js/lib/stats.js"></script>
-      <script type="text/javascript">
-         function image(img) {
-             var src = img.src;
-             window.open(src);
-         }
-         $("#resume").attr('title', 'finger cross :)');
+            <div class="flex flex-col items-center pt-6 mt-8 border-t border-neutral-200">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=MARK_ABES_WEDDING&color=111111&bgcolor=f5f5f3" class="mb-2 rounded-sm border border-neutral-300" alt="QR Code">
+                <p class="accent-label accent-label-ink" style="font-size: 0.78rem;">Scan for Transmission</p>
+            </div>
+        </article>
+    </div>
+</section>
 
-      </script>
-      <script src="lightbox-master/dist/ekko-lightbox.js"></script>
-      <script type="text/javascript">
-         $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-           event.preventDefault();
-           $(this).ekkoLightbox();
-         });
+    <!-- SECTION 4: BLACK (Attire Inspiration Grid) -->
+    <section class="w-full bg-[#111111] text-white py-24 px-6">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
+            <h3 class="section-heading mb-2 text-white">Attire Inspiration</h3>
+            <p class="accent-label text-center text-neutral-300 mb-10">All Black, Formal &mdash; Click any style reference to view full size</p>
+            <div class="ig-grid">
+                <div class="ig-tile" onclick="openLightbox(0)"><img src="attire/1.jpg" alt="Attire reference 1"></div>
+                <div class="ig-tile" onclick="openLightbox(1)"><img src="attire/2.jpg" alt="Attire reference 2"></div>
+                <div class="ig-tile" onclick="openLightbox(2)"><img src="attire/3.jpg" alt="Attire reference 3"></div>
+                <div class="ig-tile" onclick="openLightbox(3)"><img src="attire/4.jpg" alt="Attire reference 4"></div>
+                <div class="ig-tile" onclick="openLightbox(4)"><img src="attire/5.jpg" alt="Attire reference 5"></div>
+                <div class="ig-tile" onclick="openLightbox(5)"><img src="attire/6.jpg" alt="Attire reference 6"></div>
+            </div>
+        </div>
+    </section>
 
-         myFunction();
-         function myFunction() {
-           var x = document.getElementById("video_form");
-           if (window.getComputedStyle(x).visibility === "hidden") {
+    <!-- SECTION 5: WHITE (The Perspectives) -->
+    <section class="w-full bg-[#ffffff] text-[#111111] py-24 px-6 lg:px-16 border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="section-heading mb-12 text-[#111111]">The Perspectives</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-light" data-aos="fade-right">
+                    <p class="accent-label accent-label-ink mb-4">Mark's POV</p>
+                    <p class="text-xl italic leading-relaxed text-neutral-900">"I fell in love with her by slowly knowing her and how she loves her family."</p>
+                </div>
+                <div class="card-dark" data-aos="fade-left">
+                    <p class="accent-label mb-4">Abegail's POV</p>
+                    <p class="text-xl italic leading-relaxed text-neutral-100">"Destiny is a funny thing. We kept almost missing each other until the exact right time when we were finally both free, and going from friends to lovers make me just know that we are meant for each other."</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-           }
-           else{
+    <!-- SECTION 6: BLACK (Order of the Day) -->
+    <section class="w-full bg-[#121212] text-white py-24 px-6">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h3 class="section-heading mb-12 text-white">Order of the Day</h3>
+            <div class="relative pl-8 timeline-line-light">
+                <div class="mb-10 relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">04:50 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">Start of the Wedding March</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Processional begins</p>
+                </div>
+                <div class="mb-10 relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">05:00 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">Start of Ceremony</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Lola Café, S'Maison</p>
+                </div>
+                <div class="mb-10 relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">05:45 PM &ndash; 06:00 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">Photo Op Session</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Family and Guests</p>
+                </div>
+                <div class="mb-10 relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">06:05 PM &ndash; 06:15 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">Post Nup</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Couple with Bridesmaids &amp; Groomsmen &bull; Veranda Only</p>
+                </div>
+                <div class="mb-10 relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">06:20 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">Start of Program &amp; Reception</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Lola Café S'Maison (Main Dining)</p>
+                </div>
+                <div class="relative" data-aos="fade-up">
+                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
+                    <p class="accent-label text-neutral-300">08:00 PM</p>
+                    <p class="display-serif font-semibold text-2xl mt-1">End of the Program</p>
+                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Conclusion of the celebration</p>
+                </div>
+            </div>
+            <p class="text-center text-base italic mt-12 text-neutral-300 font-medium">Program subject to slight adjustments on the day</p>
+        </div>
+    </section>
 
-             document.getElementById("myPage").style.overflowY = "hidden";
+    <!-- SECTION 7: WHITE (Venue & Location) -->
+    <section id="venue-section" class="w-full bg-[#fbfbfb] text-[#111111] py-24 px-6 lg:px-16 border-t border-b border-neutral-200" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="section-heading mb-2 text-[#111111]">Venue &amp; Location</h3>
+            <p class="accent-label accent-label-ink text-center mb-12">Lola Café - S'Maison, Pasay City</p>
+            
+            <div class="map-container mb-8 shadow-xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.7583693427324!2d120.977497!3d14.5311156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbad5d53170b%3A0xa8220c7e3d5c1892!2sLOLA%20Cafe%20-%20S'Maison!5e0!3m2!1sen!2sph!4v1680000000000!5m2!1sen!2sph" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
 
-           }
-         }
-      </script>
-   </body>
+            <div class="text-center">
+                <a href="https://www.google.com/maps/place/LOLA+Cafe+-+S'Maison/@14.5311156,120.977497,17z/data=!3m1!4b1!4m6!3m5!1s0x3397cbad5d53170b:0xa8220c7e3d5c1892!8m2!3d14.5311156!4d120.9800719!16s%2Fg%2F11j4sfjx8v?entry=ttu" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-block border border-neutral-900 px-10 py-4 rounded text-sm tracking-[0.16em] uppercase font-bold transition hover:bg-neutral-900 hover:text-white">
+                    Open Directions in Google Maps &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: BLACK (Pictorial Supplement) -->
+    <section class="w-full bg-[#161616] text-white py-24 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="section-heading text-white">The Pictorial Supplement</h3>
+                <p class="accent-label text-neutral-300 mt-2">Captured Moments from our Journey</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="photo-frame" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=700&q=80" alt="Memory 1">
+                    <p class="photo-caption">When we first met in 2021</p>
+                </div>
+
+                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Memory 2">
+                    <p class="photo-caption">Movie buddy days &amp; late chats</p>
+                </div>
+
+                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="Memory 3">
+                    <p class="photo-caption">Endless conversations</p>
+                </div>
+
+                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=700&q=80" alt="Memory 4">
+                    <p class="photo-caption">Finding our way to each other</p>
+                </div>
+
+                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Memory 5">
+                    <p class="photo-caption">From friends to lovers</p>
+                </div>
+
+                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=700&q=80" alt="Memory 6">
+                    <p class="photo-caption">Ready for January 26, 2027</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: WHITE (Footer) -->
+    <footer class="w-full bg-[#ffffff] text-[#111111] border-t border-neutral-200">
+        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left accent-label accent-label-ink">
+            <span>Mark &amp; Abegail</span>
+            <span>Lola Café, S'Maison</span>
+            <span>January 26, 2027</span>
+        </div>
+        <div class="py-6 text-center border-t border-neutral-200 bg-[#f9f9f9]">
+            <p class="accent-label text-neutral-700" style="letter-spacing: 0.25em; font-size: 0.8rem;">Mark &amp; Abegail Wedding &middot; All Rights Reserved 2027</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./invitees.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true });
+
+        // Preloader transition script
+        window.addEventListener('load', function() {
+            setTimeout(function () {
+                var preloader = document.getElementById('preloader');
+                preloader.classList.add('fade-out');
+                document.body.classList.remove('preloading');
+            }, 2400); // 2.4s cinematic entry delay
+        });
+
+        // Attire Carousel Lightbox Data & Logic
+        const attireItems = [
+            { src: "attire/1.jpg", caption: "All-Black Formal Attire Reference 1" },
+            { src: "attire/2.jpg", caption: "All-Black Formal Attire Reference 2" },
+            { src: "attire/3.jpg", caption: "All-Black Formal Attire Reference 3" },
+            { src: "attire/4.jpg", caption: "All-Black Formal Attire Reference 4" },
+            { src: "attire/5.jpg", caption: "All-Black Formal Attire Reference 5" },
+            { src: "attire/6.jpg", caption: "All-Black Formal Attire Reference 6" }
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxContent();
+            document.getElementById('lightbox-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = attireItems.length - 1;
+            } else if (currentIndex >= attireItems.length) {
+                currentIndex = 0;
+            }
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = attireItems[currentIndex];
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-caption').textContent = `${currentIndex + 1} / ${attireItems.length} — ${item.caption}`;
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('lightbox-modal').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Close when clicking backdrop
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // ---------------------------------------------------------------
+        // RSVP: invitee lookup + confirmation modal
+        // The modal only ever appears when the page URL's ?rsvp= slug
+        // matches a record below. Any other URL (or none) shows the
+        // normal invitation page with no modal at all.
+        // ---------------------------------------------------------------
+
+
+        function findInvitee(slug) {
+            return INVITEES.find(function (inv) { return inv.s === slug; }) || null;
+        }
+
+        function rsvpStorageKey(slug) {
+            return 'rsvp_response_' + slug;
+        }
+
+        function openRsvpModal(invitee) {
+            document.getElementById('rsvp-guest-name').textContent = invitee.f + ' ' + invitee.l;
+            document.getElementById('rsvp-confirm-name').textContent = invitee.f + ' ' + invitee.l;
+
+            const saved = localStorage.getItem(rsvpStorageKey(invitee.s));
+            if (saved) {
+                showRsvpConfirmView(invitee, saved);
+            } else {
+                showRsvpFormView();
+            }
+
+            document.getElementById('rsvp-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeRsvpModal() {
+            document.getElementById('rsvp-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showRsvpFormView() {
+            document.getElementById('rsvp-form-view').style.display = 'block';
+            document.getElementById('rsvp-confirm-view').style.display = 'none';
+        }
+
+        function showRsvpConfirmView(invitee, answer) {
+            const text = answer === 'yes'
+                ? "We've marked you down as attending. We can't wait to celebrate with you!"
+                : "We've noted that you won't be able to join us. You'll be missed!";
+            document.getElementById('rsvp-confirm-text').textContent = text;
+            document.getElementById('rsvp-form-view').style.display = 'none';
+            document.getElementById('rsvp-confirm-view').style.display = 'block';
+        }
+
+        // Paste your deployed Google Apps Script Web App URL here
+        // (Deploy > New deployment > Web app > Execute as: Me > Who has access: Anyone)
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxXxnctvouYVov0L-Uo6-L2d6oYa54ZomyvhwTuBGWL7b2BfoL4jECoqhEyTLvtOcII/exec";
+
+        function submitRsvp() {
+            const select = document.getElementById('rsvp-select');
+            const answer = select.value;
+            const errorEl = document.getElementById('rsvp-error');
+            const submitBtn = document.getElementById('rsvp-submit-btn');
+
+            errorEl.style.display = 'none';
+
+            if (!answer) {
+                select.style.borderColor = '#b00020';
+                return;
+            }
+            select.style.borderColor = '';
+
+            const invitee = findInvitee(currentInviteeSlug);
+            if (!invitee) return;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting…';
+
+            const payload = {
+                firstName: invitee.f,
+                lastName: invitee.l,
+                status: answer === 'yes' ? 'YES' : 'NO'
+            };
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                // text/plain avoids a CORS preflight (OPTIONS) request, which
+                // Apps Script web apps don't handle. Apps Script still parses
+                // this fine via JSON.parse(e.postData.contents).
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+            })
+                .then(function (res) { return res.json(); })
+                .then(function (result) {
+                    if (result.result === 'success') {
+                        localStorage.setItem(rsvpStorageKey(currentInviteeSlug), answer);
+                        showRsvpConfirmView(invitee, answer);
+                    } else if (result.result === 'not_found') {
+                        errorEl.textContent = "We couldn't find your name on the guest list. Please contact the couple directly.";
+                        errorEl.style.display = 'block';
+                    } else {
+                        errorEl.textContent = 'Something went wrong. Please try again in a moment.';
+                        errorEl.style.display = 'block';
+                    }
+                })
+                .catch(function () {
+                    errorEl.textContent = 'Could not reach the server. Please check your connection and try again.';
+                    errorEl.style.display = 'block';
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Confirm RSVP';
+                });
+        }
+
+        function editRsvp() {
+            showRsvpFormView();
+        }
+
+        let currentInviteeSlug = null;
+
+        (function initRsvpFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('rsvp');
+            if (!slug) return;
+
+            const invitee = findInvitee(slug);
+            if (!invitee) return; // no match -> page behaves exactly as normal, no modal
+
+            currentInviteeSlug = slug;
+            // Wait for the preloader to clear before revealing the modal
+            window.addEventListener('load', function () {
+                setTimeout(function () { openRsvpModal(invitee); }, 2500);
+            });
+        })();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const rsvpEditBtn = document.getElementById('rsvp-edit-btn');
+    
+    if (rsvpEditBtn) {
+        const current_date = new Date();
+        const year = current_date.getFullYear();
+        const month = String(current_date.getMonth() + 1).padStart(2, '0');
+        const day = String(current_date.getDate()).padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`;
+        
+        const deadlineDate = '2026-09-26';
+        
+        if (formattedDate === deadlineDate) {
+            const messageElement = document.createElement('p');
+            messageElement.className = 'text-red-600 text-sm font-medium'; // Mabalin nga i-edit ti classes base iti kayatmo
+            messageElement.textContent = `You cannot change response now. Deadline is ${deadlineDate}.`;
+            
+            rsvpEditBtn.parentNode.replaceChild(messageElement, rsvpEditBtn);
+        }
+    }
+});
+    </script>
+</body>
 </html>
