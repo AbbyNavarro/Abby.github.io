@@ -336,9 +336,10 @@
                 <button id="rsvp-edit-btn" onclick="editRsvp()"
                     class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-neutral-800 underline">Change
                     response</button>
-                    <br>
+                <br>
                 <a href="index.html?preloader_false"><button id="rsvp-view-details-btn"
-                    class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-blue-800 underline">VIEW WEDDING DETAILS</button></a>
+                        class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-blue-800 underline">VIEW
+                        WEDDING DETAILS</button></a>
             </div>
         </div>
     </div>
@@ -349,28 +350,108 @@
 
         <!-- TOP EDITORIAL NAVIGATION BAR -->
         <nav
-            class="w-full border-b border-neutral-200 px-6 lg:px-16 py-6 flex justify-between items-center text-xs tracking-[0.25em] font-sans uppercase font-bold text-neutral-700 bg-white/50 backdrop-blur-md sticky top-0 z-50">
-            <div class="flex items-center gap-3">
-                <span class="w-2.5 h-2.5 bg-neutral-900 rounded-full inline-block"></span>
-                <span class="text-neutral-900 font-serif text-lg lowercase tracking-normal font-bold">m&amp;a</span>
+            class="w-full border-b border-neutral-200 text-xs tracking-[0.25em] font-sans uppercase font-bold text-neutral-700 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+
+            <div class="px-6 lg:px-16 py-6 flex justify-between items-center">
+                <!-- Brand / Logo -->
+                <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 bg-neutral-900 rounded-full inline-block"></span>
+                    <span class="text-neutral-900 font-serif text-lg uppercase tracking-normal font-bold">M&amp;A</span>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex gap-8 lg:gap-12 text-neutral-600">
+                    <a href="#story" class="hover:text-neutral-900 transition">Our Story</a>
+                    <a href="#itinerary" class="hover:text-neutral-900 transition">Itinerary</a>
+                    <a href="#entourage" class="hover:text-neutral-900 transition">Entourage</a>
+                    <a href="#attire" class="hover:text-neutral-900 transition">Attire</a>
+                    <a href="#gift-guide" class="hover:text-neutral-900 transition">Gift Guide</a>
+                    <a href="#venue-section" class="hover:text-neutral-900 transition">Venue</a>
+                    <a href="#reminders"
+                        class="text-rose-700 hover:text-rose-900 font-bold transition flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                        Reminders
+                    </a>
+                    <a href="#venue-section" class="hover:underline flex items-center gap-1 text-neutral-900">
+                        DIRECTION &rarr;
+                    </a>
+                </div>
+
+                <!-- Right Action Items (Direction Link & Mobile Toggle) -->
+                <div class="flex items-center gap-4">
+                    <!-- Mobile Hamburger Button -->
+                    <button id="menu-toggle" type="button" aria-label="Toggle navigation"
+                        class="md:hidden text-neutral-900 focus:outline-none p-1">
+                        <!-- Open Icon (Hamburger) -->
+                        <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon (X) -->
+                        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:flex gap-8 lg:gap-12 text-neutral-600">
-                <a href="#story" class="hover:text-neutral-900 transition">Our Story</a>
-                <a href="#itinerary" class="hover:text-neutral-900 transition">Itinerary</a>
-                <a href="#entourage" class="hover:text-neutral-900 transition">Entourage</a>
-                <a href="#attire" class="hover:text-neutral-900 transition">Attire</a>
-                <a href="#gift-guide" class="hover:text-neutral-900 transition">Gift Guide</a>
-                <a href="#venue-section" class="hover:text-neutral-900 transition">Venue</a>
-                <a href="#reminders"
-                    class="text-rose-700 hover:text-rose-900 font-bold transition flex items-center gap-1.5">
-                    <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
-                    Reminders
-                </a>
+
+            <!-- Mobile Collapsible Menu Container -->
+            <div id="mobile-menu"
+                class="hidden md:hidden border-t border-neutral-200 bg-white/95 backdrop-blur-md px-6 py-6">
+                <div class="flex flex-col gap-5 text-neutral-600">
+                    <a href="#story" class="nav-mobile-link hover:text-neutral-900 transition py-1">Our Story</a>
+                    <a href="#itinerary" class="nav-mobile-link hover:text-neutral-900 transition py-1">Itinerary</a>
+                    <a href="#entourage" class="nav-mobile-link hover:text-neutral-900 transition py-1">Entourage</a>
+                    <a href="#attire" class="nav-mobile-link hover:text-neutral-900 transition py-1">Attire</a>
+                    <a href="#gift-guide" class="nav-mobile-link hover:text-neutral-900 transition py-1">Gift Guide</a>
+                    <a href="#venue-section" class="nav-mobile-link hover:text-neutral-900 transition py-1">Venue</a>
+                    <a href="#reminders"
+                        class="nav-mobile-link text-rose-700 hover:text-rose-900 font-bold transition flex items-center gap-1.5 py-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                        Reminders
+                    </a>
+                    <a href="#venue-section" class="hover:underline flex items-center gap-1 text-neutral-900">
+                        DIRECTION &rarr;
+                    </a>
+                </div>
             </div>
-            <a href="#venue-section" class="hover:underline flex items-center gap-1 text-neutral-900">
-                DIRECTION &rarr;
-            </a>
         </nav>
+
+        <!-- JavaScript Toggle Handler -->
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+            const mobileLinks = document.querySelectorAll('.nav-mobile-link');
+
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = mobileMenu.classList.contains('hidden');
+
+                // Toggle menu dropdown
+                mobileMenu.classList.toggle('hidden');
+
+                // Toggle icons between Hamburger and Close X
+                if (isExpanded) {
+                    iconOpen.classList.replace('block', 'hidden');
+                    iconClose.classList.replace('hidden', 'block');
+                } else {
+                    iconOpen.classList.replace('hidden', 'block');
+                    iconClose.classList.replace('block', 'hidden');
+                }
+            });
+
+            // Automatically close menu when a mobile nav link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.replace('hidden', 'block');
+                    iconClose.classList.replace('block', 'hidden');
+                });
+            });
+        </script>
 
         <!-- SECTION 1: HERO EDITORIAL ARCH SPREAD (Directly replicating reference layout) -->
         <section class="relative w-full px-6 lg:px-16 py-12 lg:py-20 border-b border-neutral-200 overflow-hidden">
@@ -445,18 +526,11 @@
 
                 <div class="glass-panel p-8 rounded-lg flex flex-col justify-between" data-aos="fade-up">
                     <div>
-                        <span
-                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">01
-                            // History</span>
                         <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Our Love Story</h3>
                         <p class="font-serif italic text-xl text-neutral-700 leading-relaxed">
                             &ldquo;We met in 2021 with no clue that we would end up with each other. Everything felt
                             natural, starting as friends, movie buddies, and endless conversations.&rdquo;
                         </p>
-                    </div>
-                    <div
-                        class="mt-8 pt-4 border-t border-neutral-200 text-xs font-sans uppercase tracking-[0.2em] text-neutral-500">
-                        Pasay City, Philippines
                     </div>
                 </div>
 
@@ -464,7 +538,7 @@
                     data-aos-delay="100">
                     <div>
                         <span
-                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">02
+                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">
                             // Schedule</span>
                         <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Official Notices</h3>
                         <div class="space-y-3 font-serif text-lg">
@@ -491,7 +565,7 @@
                     data-aos-delay="200">
                     <div>
                         <span
-                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">03
+                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">
                             // Dresscode</span>
                         <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Attire Guidelines</h3>
                         <div class="space-y-3 font-serif text-lg">
