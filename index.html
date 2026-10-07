@@ -1,205 +1,170 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>THE UNION // MARK & ABEGAIL WEDDING EDITION</title>
+    <title>SAVE THE DATES // MARK & ABEGAIL WEDDING</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Save The Dates // Mark & Abegail Wedding">
+    <meta name="description"
+        content="Mark Valles & Abegail Navarro invite you to celebrate their wedding union on January 26, 2027 at Lola Café, S'Maison. Kindly confirm your RSVP.">
+
+    <!-- Open Graph / Facebook / Messenger / Viber / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Save The Dates // Mark & Abegail Wedding">
+    <meta property="og:description"
+        content="Mark Valles & Abegail Navarro invite you to celebrate their wedding union on January 26, 2027 at Lola Café, S'Maison. Kindly confirm your RSVP.">
+    <meta property="og:image" content="heroimg/img1.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Save The Dates // Mark & Abegail Wedding">
+    <meta property="twitter:description"
+        content="Mark Valles & Abegail Navarro invite you to celebrate their wedding union on January 26, 2027 at Lola Café, S'Maison. Kindly confirm your RSVP.">
+    <meta property="twitter:image" content="heroimg/img1.jpg">
 
     <style>
         :root {
-            --bg-light: #ffffff;
-            --bg-dark: #0f0f0f;
-            --paper: #fcfcfc;
+            --bg-canvas: #f8f8f5;
+            --paper: #ffffff;
             --ink: #111111;
-            --ink-dim: rgba(17, 17, 17, 0.78);
-            --white: #ffffff;
-            --white-dim: rgba(255, 255, 255, 0.85);
-            --dark-card: rgba(22, 22, 22, 0.95);
-            --light-card: rgba(245, 245, 243, 0.95);
-            --hairline-dark: rgba(0, 0, 0, 0.12);
-            --hairline-light: rgba(255, 255, 255, 0.15);
+            --ink-muted: rgba(17, 17, 17, 0.6);
+            --hairline: rgba(17, 17, 17, 0.1);
+            --hairline-strong: rgba(17, 17, 17, 0.22);
         }
-
-        html { scroll-padding-top: env(safe-area-inset-top, 0px); }
 
         body {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 23px;
-            font-weight: 500;
-            background: var(--bg-light);
+            font-size: 20px;
+            background-color: var(--bg-canvas);
             color: var(--ink);
-            line-height: 1.75;
-            margin: 0;
-            padding: 0;
+            line-height: 1.7;
             overflow-x: hidden;
-            padding-top: env(safe-area-inset-top, 0px);
-            padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
-        p { font-weight: 500; }
-
-        h1, h2, h3, .display-serif { font-family: 'Playfair Display', serif; }
-
-        .rule-dark { height: 1px; background: linear-gradient(90deg, transparent, var(--hairline-dark) 20%, var(--hairline-dark) 80%, transparent); width: 100%; }
-        .rule-light { height: 1px; background: linear-gradient(90deg, transparent, var(--hairline-light) 20%, var(--hairline-light) 80%, transparent); width: 100%; }
-
-        .masthead { text-align: center; padding: 60px 20px; }
-        .masthead h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            font-weight: 700;
-            font-style: italic;
-            letter-spacing: 0.01em;
-        }
-        .masthead .kicker {
-            letter-spacing: 0.3em;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .masthead .names { margin-top: 14px; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
-
-        .section-heading {
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-display {
             font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 600;
-            font-size: 2.3rem;
-            text-align: center;
-            margin-bottom: 10px;
         }
 
-        .card-dark {
-            background: var(--dark-card);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid var(--hairline-light);
-            border-radius: 4px;
-            padding: 40px;
-            color: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .card-light {
-            background: var(--light-card);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid var(--hairline-dark);
-            border-radius: 4px;
-            padding: 40px;
-            color: var(--ink);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        /* Glassmorphism subtle overlay */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
         }
 
-        .accent-label { font-size: 0.88rem; letter-spacing: 0.14em; font-weight: 700; text-transform: uppercase; }
-        .card-dark .accent-label { color: var(--white-dim); }
-        .card-light .accent-label, .accent-label-ink { color: var(--ink-dim); }
-
-        .photo-frame {
-            background: #ffffff;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 12px;
-            border: 1px solid var(--hairline-dark);
-            border-radius: 4px;
-            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .photo-frame:hover { 
-            border-color: rgba(0,0,0,0.4); 
-            transform: translateY(-4px); 
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-        }
-        .photo-frame img {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(1.1) brightness(0.96);
-            transition: filter 0.5s ease;
-        }
-        .photo-frame:hover img {
-            filter: grayscale(0%) contrast(1.02) brightness(1);
-        }
-        .photo-caption { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic; font-size: 1.05rem; text-align: center; margin-top: 12px; color: var(--ink-dim); }
-
-        .waypoint-btn-dark {
-            display: block;
-            width: 100%;
-            border: 1px solid var(--white-dim);
-            padding: 13px;
-            text-align: center;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            font-size: 0.9rem;
-            margin-top: 16px;
-            background: transparent;
-            color: var(--white);
-            border-radius: 3px;
-            text-transform: uppercase;
-            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        }
-        .waypoint-btn-dark:hover { background: var(--white); color: #0a0a0a; transform: translateY(-1px); }
-
-        .waypoint-btn-light {
-            display: block;
-            width: 100%;
-            border: 1px solid var(--ink);
-            padding: 13px;
-            text-align: center;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            font-size: 0.9rem;
-            margin-top: 16px;
-            background: transparent;
-            color: var(--ink);
-            border-radius: 3px;
-            text-transform: uppercase;
-            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-        }
-        .waypoint-btn-light:hover { background: var(--ink); color: #ffffff; transform: translateY(-1px); }
-
-        .timeline-line-dark { border-left: 1px solid var(--hairline-dark); }
-        .timeline-line-light { border-left: 1px solid var(--hairline-light); }
-        .timeline-dot { width: 9px; height: 9px; border-radius: 50%; }
-
-        /* Attire Instagram-style tile grid */
-        .ig-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px;
-            border: 1px solid var(--hairline-dark);
-            padding: 4px;
-            background: var(--hairline-dark);
-        }
-        @media (max-width: 640px) {
-            .ig-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        .ig-tile {
-            position: relative;
-            aspect-ratio: 1 / 1;
+        /* Image Arch Shape directly inspired by image */
+        .arch-frame {
+            border-radius: 180px 180px 12px 12px;
             overflow: hidden;
-            background: #e5e5df;
-            cursor: pointer;
+            position: relative;
+            background: #e9e9e5;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
         }
-        .ig-tile img {
+
+        .arch-frame:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .arch-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(100%) contrast(1.1) brightness(0.96);
-            transition: filter 0.5s ease, transform 0.5s ease;
-        }
-        .ig-tile:hover img {
-            filter: grayscale(0%) contrast(1.02) brightness(1);
-            transform: scale(1.06);
+            filter: grayscale(100%) contrast(1.05);
+            transition: filter 0.7s ease, transform 0.7s ease;
         }
 
-        /* Lightbox Carousel Modal */
+        .arch-frame:hover img {
+            filter: grayscale(0%) contrast(1.02);
+            transform: scale(1.04);
+        }
+
+        /* Continuous Rotating Circular Stamp Badge */
+        @keyframes spinSlow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-stamp {
+            animation: spinSlow 22s linear infinite;
+        }
+
+        /* Interactive Timeline List Hover Animation */
+        .timeline-list-item {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .timeline-list-item:hover {
+            background: rgba(255, 255, 255, 0.85);
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-bottom-color: var(--ink);
+        }
+
+        .timeline-list-item:hover .timeline-num {
+            transform: translateX(6px);
+            color: #000000;
+        }
+
+        .timeline-list-item:hover .timeline-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Entourage Card List Interactive States */
+        .entourage-card {
+            transition: all 0.35s ease;
+            border: 1px solid var(--hairline);
+        }
+
+        .entourage-card:hover {
+            border-color: rgba(17, 17, 17, 0.3);
+            background: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-canvas);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        /* Lightbox Modal */
         #lightbox-modal {
             position: fixed;
             inset: 0;
             z-index: 10000;
-            background: rgba(5, 5, 5, 0.94);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -207,171 +172,37 @@
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
         #lightbox-modal.active {
             opacity: 1;
             visibility: visible;
-        }
-        .lightbox-content {
-            position: relative;
-            max-width: 90vw;
-            max-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 72vh;
-            object-fit: contain;
-            border-radius: 4px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .lightbox-caption {
-            margin-top: 16px;
-            color: rgba(255,255,255,0.92);
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-style: italic;
-            font-size: 1.2rem;
-            letter-spacing: 0.05em;
-            text-align: center;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: -50px;
-            right: 0;
-            background: transparent;
-            border: none;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 10px;
-            line-height: 1;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-        .lightbox-close:hover { opacity: 1; }
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-            font-size: 1.2rem;
-        }
-        .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
-        .lightbox-prev { left: -70px; }
-        .lightbox-next { right: -70px; }
-        @media (max-width: 768px) {
-            .lightbox-prev { left: 10px; background: rgba(0,0,0,0.5); }
-            .lightbox-next { right: 10px; background: rgba(0,0,0,0.5); }
-            .lightbox-close { top: -45px; right: 10px; }
         }
 
         /* Preloader */
         #preloader {
             position: fixed;
             inset: 0;
-            width: 100vw;
-            height: 100vh;
             z-index: 9999;
-            background: #111111;
+            background: #0d0d0d;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), visibility 1.2s ease;
+            transition: opacity 1.2s ease, visibility 1.2s ease;
         }
+
         #preloader.fade-out {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
         }
-        body.preloading { overflow: hidden; }
 
-        .preloader-inner {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            padding: 0 20px;
-        }
-
-        .preloader-monogram {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: clamp(3.2rem, 8vw, 5rem);
-            color: #ffffff;
-            letter-spacing: 0.08em;
-            margin-bottom: 12px;
-            animation: pulseGlow 2.5s infinite ease-in-out;
-        }
-
-        .preloader-subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 28px;
-        }
-
-        .preloader-line {
-            width: 120px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .preloader-line::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, #ffffff, transparent);
-            animation: shimmerBar 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        @keyframes shimmerBar {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.85; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.02); text-shadow: 0 0 30px rgba(255,255,255,0.25); }
-        }
-
-        .map-container {
-            position: relative;
-            width: 100%;
-            height: 420px;
-            border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid var(--hairline-dark);
-        }
-
-        /* RSVP Confirmation Modal */
+        /* RSVP Modal */
         #rsvp-modal {
             position: fixed;
             inset: 0;
             z-index: 10001;
-            background: rgba(5, 5, 5, 0.88);
+            background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -380,410 +211,991 @@
             transition: opacity 0.35s ease, visibility 0.35s ease;
             padding: 24px;
         }
+
         #rsvp-modal.active {
             opacity: 1;
             visibility: visible;
         }
-        .rsvp-card {
-            position: relative;
-            width: 100%;
-            max-width: 460px;
-            background: var(--paper);
-            border: 1px solid var(--hairline-dark);
-            border-radius: 6px;
-            padding: 44px 38px;
-            text-align: center;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-            transform: translateY(14px);
-            transition: transform 0.35s ease;
+
+        /* Continuous CD Rotation Animation */
+        @keyframes spinCD {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
-        #rsvp-modal.active .rsvp-card { transform: translateY(0); }
-        .rsvp-kicker {
-            letter-spacing: 0.3em;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--ink-dim);
+
+        .animate-spin-cd {
+            animation: spinCD 3.5s linear infinite;
         }
-        .rsvp-name {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-weight: 700;
-            font-size: 2.1rem;
-            color: var(--ink);
-            margin-top: 10px;
-            margin-bottom: 6px;
+
+        /* Pause State for CSS Animation */
+        .cd-paused {
+            animation-play-state: paused !important;
         }
-        .rsvp-sub {
-            font-size: 1.05rem;
-            color: var(--ink-dim);
-            margin-bottom: 26px;
+
+        /* Metallic Silver Light-Hit Sweep Animation */
+        @keyframes silverShine {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
-        .rsvp-field-label {
-            display: block;
-            text-align: left;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-dim);
-            margin-bottom: 8px;
+
+        .animate-silver-shine {
+            background: linear-gradient(110deg,
+                    rgba(255, 255, 255, 0.08) 35%,
+                    rgba(255, 255, 255, 0.65) 50%,
+                    rgba(255, 255, 255, 0.08) 65%);
+            background-size: 200% 100%;
+            animation: silverShine 8s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
         }
-        #rsvp-select {
-            width: 100%;
-            padding: 13px 14px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.15rem;
-            font-weight: 600;
-            border: 1px solid var(--ink);
-            border-radius: 3px;
-            background: #ffffff;
-            color: var(--ink);
-            margin-bottom: 22px;
-            appearance: none;
-            -webkit-appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9'><path d='M1 1l6 6 6-6' stroke='%23111111' stroke-width='1.6' fill='none' fill-rule='evenodd'/></svg>");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
+
+        #enter-btn {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .rsvp-submit-btn {
-            width: 100%;
-            border: 1px solid var(--ink);
-            padding: 14px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            font-size: 0.9rem;
-            background: var(--ink);
+
+        #enter-btn:hover {
             color: #ffffff;
-            border-radius: 3px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-        .rsvp-submit-btn:hover { opacity: 0.85; transform: translateY(-1px); }
-        .rsvp-submit-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
-        .rsvp-close {
-            position: absolute;
-            top: 14px;
-            right: 16px;
-            background: transparent;
-            border: none;
-            color: var(--ink-dim);
-            font-size: 1.5rem;
-            cursor: pointer;
-            line-height: 1;
-            padding: 6px;
-        }
-        .rsvp-close:hover { color: var(--ink); }
-        .rsvp-confirm-icon {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 2.4rem;
-            color: var(--ink);
-            margin-bottom: 10px;
-        }
-        .rsvp-confirm-text {
-            font-size: 1.15rem;
-            color: var(--ink-dim);
-            line-height: 1.6;
-        }
-        .rsvp-edit-link {
-            display: inline-block;
-            margin-top: 18px;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--ink-dim);
-            text-decoration: underline;
-            cursor: pointer;
-            background: none;
-            border: none;
+            border-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.18);
+            transform: scale(1.06);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
-<body class="preloading">
 
-    <div id="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-monogram">Mark &amp; Abegail</div>
-            <div class="preloader-line"></div>
-            <p class="mt-6 text-sm uppercase tracking-[0.3em] text-neutral-300 font-sans">Preparing Celebration...</p>
+<body class="preloading antialiased">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="cursor-pointer select-none">
+        <div class="text-center px-6">
+            <div class="font-display italic text-5xl md:text-6xl text-white mb-3 tracking-wide">Mark &amp; Abegail</div>
+            <div class="w-24 h-px bg-neutral-600 mx-auto my-4 relative overflow-hidden">
+                <div class="absolute inset-0 bg-white animate-pulse"></div>
+            </div>
+            <p class="text-xs font-sans tracking-[0.4em] uppercase text-neutral-400 mb-6">THE UNION</p>
+
+            <p id="enter-btn"
+                class="mt-5 text-xs font-sans tracking-[0.25em] uppercase text-neutral-200 animate-silver-shine border border-white/5 py-2.5 px-6 inline-block backdrop-blur-sm cursor-pointer">
+                View Wedding Details</p>
         </div>
     </div>
 
+    <!-- LIGHTBOX MODAL -->
     <div id="lightbox-modal">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()" title="Close">&times;</button>
-            <button class="lightbox-nav lightbox-prev" onclick="changeSlide(-1)" title="Previous">&#10094;</button>
-            <button class="lightbox-nav lightbox-next" onclick="changeSlide(1)" title="Next">&#10095;</button>
-            <img id="lightbox-img" src="" alt="Full-size attire preview">
-            <p id="lightbox-caption" class="lightbox-caption"></p>
+        <div class="relative max-w-4xl max-h-[85vh] p-4 flex flex-col items-center">
+            <button onclick="closeLightbox()"
+                class="absolute -top-12 right-0 text-white text-3xl opacity-80 hover:opacity-100">&times;</button>
+            <img id="lightbox-img" src="" class="max-h-[70vh] rounded border border-white/20 shadow-2xl object-contain">
+            <p id="lightbox-caption" class="mt-4 text-white font-serif italic text-lg text-center"></p>
         </div>
     </div>
 
-    <!-- RSVP Confirmation Modal: only ever shown when the URL's ?rsvp= slug matches an invitee -->
+    <!-- RSVP MODAL -->
     <div id="rsvp-modal">
-        <div class="rsvp-card">
-            <button class="rsvp-close" onclick="closeRsvpModal()" title="Close">&times;</button>
-
+        <div
+            class="relative w-full max-w-lg bg-[#fcfcf9] border border-neutral-300 rounded-lg p-8 md:p-12 text-center shadow-2xl">
+            <button onclick="closeRsvpModal()"
+                class="absolute top-4 right-4 text-neutral-500 hover:text-black text-2xl">&times;</button>
             <div id="rsvp-form-view">
-                <p class="rsvp-kicker">You're Invited</p>
-                <p class="rsvp-name" id="rsvp-guest-name">&nbsp;</p>
-                <p class="rsvp-sub">Kindly confirm your attendance for our wedding celebration.</p>
+                <span class="text-xs uppercase tracking-[0.3em] text-neutral-500 font-sans font-bold">Wedding
+                    Invitation</span>
+                <h3 class="font-display italic text-4xl text-neutral-900 mt-2 mb-1" id="rsvp-guest-name">&nbsp;</h3>
+                <p class="text-neutral-600 text-base mb-6 font-serif">Kindly confirm your attendance for our wedding
+                    celebration.</p>
 
-                <label class="rsvp-field-label" for="rsvp-select">Will you be attending?</label>
-                <select id="rsvp-select">
-                    <option value="" disabled selected>Choose an answer&hellip;</option>
-                    <option value="yes">Yes, I'll be there</option>
-                    <option value="no">No, I can't make it</option>
+                <label
+                    class="block text-left text-xs uppercase tracking-[0.15em] font-sans font-bold text-neutral-500 mb-2"
+                    for="rsvp-select">Your Confirmation</label>
+                <select id="rsvp-select"
+                    class="w-full p-3 font-serif text-lg border border-neutral-800 rounded bg-white text-neutral-900 mb-6 focus:outline-none">
+                    <option value="" disabled selected>Choose response&hellip;</option>
+                    <option value="yes">Yes, I will attend</option>
+                    <option value="no">Regretfully decline</option>
                 </select>
 
-                <button class="rsvp-submit-btn" id="rsvp-submit-btn" onclick="submitRsvp()">Confirm RSVP</button>
-                <p id="rsvp-error" style="display:none; color:#b00020; font-size:0.9rem; margin-top:14px;"></p>
+                <button id="rsvp-submit-btn" onclick="submitRsvp()"
+                    class="w-full bg-neutral-900 text-white font-sans uppercase text-xs tracking-[0.2em] font-bold py-4 rounded hover:bg-neutral-800 transition">
+                    Confirm RSVP
+                </button>
+                <p id="rsvp-error" class="hidden text-red-600 text-sm mt-3"></p>
             </div>
 
-            <div id="rsvp-confirm-view" style="display:none;">
-                <p class="rsvp-confirm-icon">Thank You</p>
-                <p class="rsvp-name" id="rsvp-confirm-name">&nbsp;</p>
-                <p class="rsvp-confirm-text" id="rsvp-confirm-text"></p>
-                <button id="rsvp-edit-btn" class="rsvp-edit-link" onclick="editRsvp()">Change my response</button>
+            <div id="rsvp-confirm-view" class="hidden">
+                <h3 class="font-display italic text-4xl text-neutral-900 mb-2">Thank You</h3>
+                <p class="font-display italic text-2xl text-neutral-800 mb-3" id="rsvp-confirm-name">&nbsp;</p>
+                <p class="text-neutral-600 text-lg font-serif mb-6" id="rsvp-confirm-text"></p>
+                <button id="rsvp-edit-btn" onclick="editRsvp()"
+                    class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-neutral-800 underline">Change
+                    response</button>
+                    <br>
+                <a href="index.html?preloader_false"><button id="rsvp-view-details-btn"
+                    class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-blue-800 underline">VIEW WEDDING DETAILS</button></a>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 3: WHITE (Cards: Story, Notices, Attire) -->
-<section class="w-full bg-[#fafafa] text-[#111111] py-20 px-6 lg:px-16 border-t border-b border-neutral-200">
-        <!-- SECTION 1: WHITE (Masthead) -->
-<header class="w-full bg-[#ffffff] text-[#111111] pt-12 pb-16 px-6 relative border-b border-neutral-200">
-    <div class="max-w-7xl mx-auto">
-        <div class="masthead">
-            <p class="kicker text-neutral-800">The Union</p>
-            <h1 class="text-[#111111]">Mark &amp; Abegail</h1>
-            <p class="names text-neutral-700">A Celebration of Marriage</p>
-        </div>
-        <div class="rule-dark"></div>
-    </div>
-</header>
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        <article class="card-light flex flex-col justify-between" data-aos="fade-up">
-            <div>
-                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Our Love Story</h3>
-                <p class="text-lg text-neutral-800 mt-4 leading-relaxed">We met in 2021 with no clue that we would end up with each other. Everything felt natural, starting as friends, movie buddies, and endless conversations.</p>
-            </div>
-            <div class="mt-8 pt-4 border-t border-neutral-200">
-                <p class="accent-label text-neutral-700">Established 2021</p>
-            </div>
-        </article>
+    <!-- MAIN PAGE CONTAINER WITH VERTICAL COLUMN GUIDES -->
+    <div
+        class="relative w-full min-h-screen bg-[#f8f8f5] text-neutral-900 border-x border-neutral-200/80 max-w-[1600px] mx-auto shadow-2xl">
 
-        <article class="card-light flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-            <div>
-                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Official Notices</h3>
-                <div class="space-y-3 mt-4 text-neutral-900">
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Date&nbsp;</span> &nbsp;January 26, 2027</p>
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Time&nbsp;</span> &nbsp;4:00 PM</p>
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Venue</span> &nbsp;Lola Café, S'Maison</p>
-                </div>
+        <!-- TOP EDITORIAL NAVIGATION BAR -->
+        <nav
+            class="w-full border-b border-neutral-200 px-6 lg:px-16 py-6 flex justify-between items-center text-xs tracking-[0.25em] font-sans uppercase font-bold text-neutral-700 bg-white/50 backdrop-blur-md sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <span class="w-2.5 h-2.5 bg-neutral-900 rounded-full inline-block"></span>
+                <span class="text-neutral-900 font-serif text-lg lowercase tracking-normal font-bold">m&amp;a</span>
             </div>
-            <div class="mt-8 pt-4 border-t border-neutral-200 text-center">
-                <button onclick="document.getElementById('venue-section').scrollIntoView({behavior: 'smooth'})" class="waypoint-btn-light">View Venue Map</button>
-            </div>
-        </article>
-
-        <article class="card-light flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-            <div>
-                <h3 class="section-heading text-left text-[#111111]" style="font-size: 1.9rem;">Attire Guidelines</h3>
-                <div class="space-y-3 mt-4 text-neutral-900">
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Theme</span> &nbsp;All Black, Formal</p>
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Ladies</span> &nbsp;Black long dress / Polo short sleeve &amp; long skirt</p>
-                    <p class="text-lg"><span class="accent-label accent-label-ink">Gentlemen</span> &nbsp;Black formal attire</p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center pt-6 mt-8 border-t border-neutral-200">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=MARK_ABES_WEDDING&color=111111&bgcolor=f5f5f3" class="mb-2 rounded-sm border border-neutral-300" alt="QR Code">
-                <p class="accent-label accent-label-ink" style="font-size: 0.78rem;">Scan for Transmission</p>
-            </div>
-        </article>
-    </div>
-</section>
-
-    <!-- SECTION 4: BLACK (Attire Inspiration Grid) -->
-    <section class="w-full bg-[#111111] text-white py-24 px-6">
-        <div class="max-w-5xl mx-auto" data-aos="fade-up">
-            <h3 class="section-heading mb-2 text-white">Attire Inspiration</h3>
-            <p class="accent-label text-center text-neutral-300 mb-10">All Black, Formal &mdash; Click any style reference to view full size</p>
-            <div class="ig-grid">
-                <div class="ig-tile" onclick="openLightbox(0)"><img src="attire/1.jpg" alt="Attire reference 1"></div>
-                <div class="ig-tile" onclick="openLightbox(1)"><img src="attire/2.jpg" alt="Attire reference 2"></div>
-                <div class="ig-tile" onclick="openLightbox(2)"><img src="attire/3.jpg" alt="Attire reference 3"></div>
-                <div class="ig-tile" onclick="openLightbox(3)"><img src="attire/4.jpg" alt="Attire reference 4"></div>
-                <div class="ig-tile" onclick="openLightbox(4)"><img src="attire/5.jpg" alt="Attire reference 5"></div>
-                <div class="ig-tile" onclick="openLightbox(5)"><img src="attire/6.jpg" alt="Attire reference 6"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: WHITE (The Perspectives) -->
-    <section class="w-full bg-[#ffffff] text-[#111111] py-24 px-6 lg:px-16 border-b border-neutral-200">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="section-heading mb-12 text-[#111111]">The Perspectives</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card-light" data-aos="fade-right">
-                    <p class="accent-label accent-label-ink mb-4">Mark's POV</p>
-                    <p class="text-xl italic leading-relaxed text-neutral-900">"I fell in love with her by slowly knowing her and how she loves her family."</p>
-                </div>
-                <div class="card-dark" data-aos="fade-left">
-                    <p class="accent-label mb-4">Abegail's POV</p>
-                    <p class="text-xl italic leading-relaxed text-neutral-100">"Destiny is a funny thing. We kept almost missing each other until the exact right time when we were finally both free, and going from friends to lovers make me just know that we are meant for each other."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: BLACK (Order of the Day) -->
-    <section class="w-full bg-[#121212] text-white py-24 px-6">
-        <div class="max-w-3xl mx-auto" data-aos="fade-up">
-            <h3 class="section-heading mb-12 text-white">Order of the Day</h3>
-            <div class="relative pl-8 timeline-line-light">
-                <div class="mb-10 relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">04:50 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">Start of the Wedding March</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Processional begins</p>
-                </div>
-                <div class="mb-10 relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">05:00 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">Start of Ceremony</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Lola Café, S'Maison</p>
-                </div>
-                <div class="mb-10 relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">05:45 PM &ndash; 06:00 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">Photo Op Session</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Family and Guests</p>
-                </div>
-                <div class="mb-10 relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">06:05 PM &ndash; 06:15 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">Post Nup</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Couple with Bridesmaids &amp; Groomsmen &bull; Veranda Only</p>
-                </div>
-                <div class="mb-10 relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">06:20 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">Start of Program &amp; Reception</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Lola Café S'Maison (Main Dining)</p>
-                </div>
-                <div class="relative" data-aos="fade-up">
-                    <span class="timeline-dot absolute bg-white" style="left: -37px; top: 6px;"></span>
-                    <p class="accent-label text-neutral-300">08:00 PM</p>
-                    <p class="display-serif font-semibold text-2xl mt-1">End of the Program</p>
-                    <p class="text-lg italic text-neutral-300 mt-1 font-medium">Conclusion of the celebration</p>
-                </div>
-            </div>
-            <p class="text-center text-base italic mt-12 text-neutral-300 font-medium">Program subject to slight adjustments on the day</p>
-        </div>
-    </section>
-
-    <!-- SECTION 7: WHITE (Venue & Location) -->
-    <section id="venue-section" class="w-full bg-[#fbfbfb] text-[#111111] py-24 px-6 lg:px-16 border-t border-b border-neutral-200" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="section-heading mb-2 text-[#111111]">Venue &amp; Location</h3>
-            <p class="accent-label accent-label-ink text-center mb-12">Lola Café - S'Maison, Pasay City</p>
-            
-            <div class="map-container mb-8 shadow-xl">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.7583693427324!2d120.977497!3d14.5311156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbad5d53170b%3A0xa8220c7e3d5c1892!2sLOLA%20Cafe%20-%20S'Maison!5e0!3m2!1sen!2sph!4v1680000000000!5m2!1sen!2sph" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <div class="text-center">
-                <a href="https://www.google.com/maps/place/LOLA+Cafe+-+S'Maison/@14.5311156,120.977497,17z/data=!3m1!4b1!4m6!3m5!1s0x3397cbad5d53170b:0xa8220c7e3d5c1892!8m2!3d14.5311156!4d120.9800719!16s%2Fg%2F11j4sfjx8v?entry=ttu" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="inline-block border border-neutral-900 px-10 py-4 rounded text-sm tracking-[0.16em] uppercase font-bold transition hover:bg-neutral-900 hover:text-white">
-                    Open Directions in Google Maps &rarr;
+            <div class="hidden md:flex gap-8 lg:gap-12 text-neutral-600">
+                <a href="#story" class="hover:text-neutral-900 transition">Our Story</a>
+                <a href="#itinerary" class="hover:text-neutral-900 transition">Itinerary</a>
+                <a href="#entourage" class="hover:text-neutral-900 transition">Entourage</a>
+                <a href="#attire" class="hover:text-neutral-900 transition">Attire</a>
+                <a href="#gift-guide" class="hover:text-neutral-900 transition">Gift Guide</a>
+                <a href="#venue-section" class="hover:text-neutral-900 transition">Venue</a>
+                <a href="#reminders"
+                    class="text-rose-700 hover:text-rose-900 font-bold transition flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                    Reminders
                 </a>
             </div>
-        </div>
-    </section>
+            <a href="#venue-section" class="hover:underline flex items-center gap-1 text-neutral-900">
+                DIRECTION &rarr;
+            </a>
+        </nav>
 
-    <!-- SECTION 8: BLACK (Pictorial Supplement) -->
-    <section class="w-full bg-[#161616] text-white py-24 px-6 lg:px-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h3 class="section-heading text-white">The Pictorial Supplement</h3>
-                <p class="accent-label text-neutral-300 mt-2">Captured Moments from our Journey</p>
+        <!-- SECTION 1: HERO EDITORIAL ARCH SPREAD (Directly replicating reference layout) -->
+        <section class="relative w-full px-6 lg:px-16 py-12 lg:py-20 border-b border-neutral-200 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Title Column -->
+                <div class="lg:col-span-5 flex flex-col justify-between h-full relative z-10" data-aos="fade-right">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.35em] text-neutral-500 font-sans font-bold block mb-4">Wedding
+                            Edition // Jan 26, 2027</span>
+                        <h1
+                            class="font-display text-6xl sm:text-7xl lg:text-8xl tracking-tight text-neutral-900 leading-[0.88] uppercase font-medium mb-8">
+                            SAVE<br>THE<br>DATES
+                        </h1>
+                        <p class="font-serif italic text-2xl text-neutral-700 max-w-sm">
+                            Mark Valles &amp; Abegail Navarro invite you to celebrate their union at Lola Café,
+                            S'Maison.
+                        </p>
+                    </div>
+
+                    <!-- Circular Rotating Interactive Stamp Badge -->
+                    <div class="mt-12 lg:mt-20 relative w-36 h-36 flex items-center justify-center">
+                        <svg class="w-full h-full animate-spin-stamp text-neutral-800" viewBox="0 0 100 100">
+                            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                                fill="none" />
+                            <text font-size="8.5" font-family="Cormorant Garamond" font-weight="600"
+                                letter-spacing="2.2">
+                                <textPath href="#circlePath" startOffset="0%">
+                                    • YOU ARE INVITED • MARK &amp; ABEGAIL • JAN 26 2027
+                                </textPath>
+                            </text>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="font-serif italic text-xl font-bold">M&amp;A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Triple Arch Images Column -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6" data-aos="fade-left">
+
+                    <!-- Arch 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="arch-frame w-full aspect-[2/3] shadow-md">
+                            <img src="heroimg/2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Arch 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="arch-frame w-full aspect-[2/3] shadow-md">
+                            <img src="heroimg/1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Arch 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="arch-frame w-full aspect-[2/3] shadow-md">
+                            <img src="heroimg/3.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: EDITORIAL CARDS SPREAD (Story, Notices, Attire) -->
+        <section id="story" class="w-full py-20 px-6 lg:px-16 border-b border-neutral-200 bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="glass-panel p-8 rounded-lg flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">01
+                            // History</span>
+                        <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Our Love Story</h3>
+                        <p class="font-serif italic text-xl text-neutral-700 leading-relaxed">
+                            &ldquo;We met in 2021 with no clue that we would end up with each other. Everything felt
+                            natural, starting as friends, movie buddies, and endless conversations.&rdquo;
+                        </p>
+                    </div>
+                    <div
+                        class="mt-8 pt-4 border-t border-neutral-200 text-xs font-sans uppercase tracking-[0.2em] text-neutral-500">
+                        Pasay City, Philippines
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-lg flex flex-col justify-between" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">02
+                            // Schedule</span>
+                        <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Official Notices</h3>
+                        <div class="space-y-3 font-serif text-lg">
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Date</strong>
+                                January 26, 2027</p>
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Time</strong>
+                                4:00 PM PST</p>
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Location</strong>
+                                Lola Café, S'Maison</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-neutral-200">
+                        <a href="#venue-section"
+                            class="text-xs font-sans uppercase tracking-[0.2em] font-bold text-neutral-900 hover:underline">
+                            View Directions &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-lg flex flex-col justify-between" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-sans font-bold block mb-2">03
+                            // Dresscode</span>
+                        <h3 class="font-display italic text-3xl text-neutral-900 mb-4">Attire Guidelines</h3>
+                        <div class="space-y-3 font-serif text-lg">
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Theme</strong>
+                                All Black, Formal</p>
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Ladies</strong>
+                                Black long dress / Polo short sleeve &amp; long skirt</p>
+                            <p><strong
+                                    class="font-sans text-xs uppercase tracking-widest text-neutral-500 block">Gentlemen</strong>
+                                Black formal attire</p>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-8 pt-4 border-t border-neutral-200 text-xs font-sans uppercase tracking-[0.2em] text-red-600">
+                        Strictly Black Formal
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: ORDER OF THE DAY (LIST TYPE TIMELINE WITH ANIMATIONS) -->
+        <section id="itinerary" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-[#f8f8f5]">
+            <div class="max-w-5xl mx-auto">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-neutral-300"
+                    data-aos="fade-up">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.3em] text-neutral-500 font-sans font-bold block mb-2">Program
+                            Schedule</span>
+                        <h2 class="font-display italic text-5xl md:text-6xl text-neutral-900">Order of the Day</h2>
+                    </div>
+                    <p class="font-serif italic text-neutral-600 text-xl mt-4 md:mt-0">Lola Café, S'Maison &bull; Pasay
+                        City</p>
+                </div>
+
+                <!-- LIST TYPE TIMELINE -->
+                <div class="space-y-0">
+
+                    <!-- Item 1 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">01</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                04:50 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">Start of the Wedding March
+                            </h3>
+                            <p class="font-serif italic text-neutral-600">Processional begins</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="50">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">02</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                05:00 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">Start of Ceremony</h3>
+                            <p class="font-serif italic text-neutral-600">Lola Café, S'Maison</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">03</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                05:45 PM &ndash; 06:00 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">Photo Op Session</h3>
+                            <p class="font-serif italic text-neutral-600">Family and Guests</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">04</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                06:05 PM &ndash; 06:15 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">Post Nup Shoot</h3>
+                            <p class="font-serif italic text-neutral-600">Couple with Bridesmaids &amp; Groomsmen &bull;
+                                Veranda Only</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">05</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                06:20 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">Start of Program &amp;
+                                Reception</h3>
+                            <p class="font-serif italic text-neutral-600">Lola Café S'Maison (Main Dining)</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="timeline-list-item py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer"
+                        data-aos="fade-up" data-aos-delay="250">
+                        <div class="flex items-center gap-8">
+                            <span
+                                class="timeline-num font-display italic text-3xl text-neutral-400 font-bold transition-all w-12">06</span>
+                            <span
+                                class="font-sans text-xs uppercase tracking-[0.25em] font-bold py-1.5 px-4 rounded-full bg-neutral-200/80 text-neutral-800">
+                                08:00 PM
+                            </span>
+                        </div>
+                        <div class="md:text-right flex-grow">
+                            <h3 class="font-display text-2xl text-neutral-900 font-semibold">End of Program</h3>
+                            <p class="font-serif italic text-neutral-600">Conclusion of the celebration</p>
+                        </div>
+                        <div
+                            class="timeline-arrow opacity-0 -translate-x-4 transition-all hidden md:block text-neutral-900 text-2xl">
+                            &rarr;</div>
+                    </div>
+
+                </div>
+
+                <p class="text-center font-serif italic text-neutral-500 text-base mt-12">Program subject to slight
+                    adjustments on the day</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: THE ENTOURAGE (EDITORIAL LIST & CARDS SPREAD) -->
+        <section id="entourage" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span
+                        class="text-xs uppercase tracking-[0.35em] text-neutral-500 font-sans font-bold block mb-2">Line
+                        Up of the Entourage</span>
+                    <h2 class="font-display italic text-5xl md:text-6xl text-neutral-900">The Entourage</h2>
+                    <p class="font-serif italic text-neutral-600 text-xl mt-2">Location: Veranda</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Core Wedding Party -->
+                    <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up">
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">The
+                            Couple &amp; Honours</span>
+
+                        <div class="space-y-6">
+
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Groom
+                                    Parents</span>
+                                <p class="font-serif text-lg text-neutral-800">Feliciana Parido</p>
+                                <p class="font-serif text-lg text-neutral-800">Paul Parido</p>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Bride's
+                                    Parents</span>
+                                <p class="font-serif text-lg text-neutral-800">Adela Navarro</p>
+                                <p class="font-serif text-lg text-neutral-800">Alexander Navarro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bride's Side -->
+                    <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up" data-aos-delay="100">
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Bride
+                            &amp; Maids of Honor</span>
+
+                        <div class="space-y-6">
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Best
+                                    Men</span>
+                                <p class="font-serif text-lg text-neutral-800">Paul Kristian Parido</p>
+                                <p class="font-serif text-lg text-neutral-800">Mark Diaz</p>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Maids
+                                    of Honor</span>
+                                <p class="font-serif text-lg text-neutral-800">Dawn Angelique Navarro</p>
+                                <p class="font-serif text-lg text-neutral-800">Ana Rose Benavente</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Secondary Sponsors -->
+                    <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up" data-aos-delay="200">
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Secondary
+                            Sponsors</span>
+
+                        <div class="space-y-6">
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Candle
+                                    Sponsors</span>
+                                <p class="font-serif text-lg text-neutral-800">Bianca &amp; Mark Darius</p>
+                            </div>
+
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Veil
+                                    Sponsors</span>
+                                <p class="font-serif text-lg text-neutral-800">Camille &amp; Ian</p>
+                            </div>
+
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Cord
+                                    Sponsors</span>
+                                <p class="font-serif text-lg text-neutral-800">Keren &amp; Nicho</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bearers & Flower Girls -->
+                    <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up" data-aos-delay="300">
+                        <span
+                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Bearers
+                            &amp; Flower Girls</span>
+
+                        <div class="space-y-6">
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Bible
+                                    Bearers</span>
+                                <p class="font-serif text-lg text-neutral-800">Leila and Cedrick</p>
+                            </div>
+
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Flower
+                                    Girls</span>
+                                <p class="font-serif text-lg text-neutral-800">Mika &bull; Maxine &bull; Vincent</p>
+                            </div>
+
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-neutral-400 font-sans block mb-1">Ring
+                                    Bearers</span>
+                                <p class="font-serif text-lg text-neutral-800">Aira &bull; Uno &bull; Anton</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PRINCIPAL SPONSORS GRID SPREAD -->
+                <div class="mt-12 entourage-card p-8 md:p-12 rounded-lg bg-[#fafafa]" data-aos="fade-up">
+                    <div class="text-center mb-8">
+                        <span
+                            class="text-xs uppercase tracking-[0.3em] font-sans font-bold text-neutral-500 block mb-1">Standing
+                            Witnesses</span>
+                        <h3 class="font-display italic text-4xl text-neutral-900">Principal Sponsors</h3>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 font-serif text-lg text-center text-neutral-800">
+                        <!-- Single -->
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Paul Michael Parido</span>
+                        </div>
+
+                        <!-- Pairs -->
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Gabriel &amp; Shane</span>
+                        </div>
+
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Maximo &amp; Gil</span>
+                        </div>
+
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Imelda &amp; De Mesa</span>
+                        </div>
+
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Tita Jane &amp; Tito Marlo</span>
+                        </div>
+
+                        <!-- Single -->
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Norma Lopez</span>
+                        </div>
+
+                        <!-- Pair (Overseas) -->
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Edwin Lamug &amp; Olivia Lamug</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: ATTIRE INSPIRATION GRID -->
+        <section id="attire" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-[#0e0e0e] text-white">
+            <div class="max-w-6xl mx-auto" data-aos="fade-up">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 pb-6 border-b border-neutral-800">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-sans font-bold block mb-2">Visual
+                            Guide</span>
+                        <h2 class="font-display italic text-5xl text-white">Attire Inspiration</h2>
+                    </div>
+                    <p class="font-serif italic text-neutral-400 text-lg mt-2 md:mt-0">All Black, Formal &mdash; Click
+                        to view preview</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(0)"><img
+                            src="attire/1.jpg" alt="Style 1"></div>
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(1)"><img
+                            src="attire/2.jpg" alt="Style 2"></div>
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(2)"><img
+                            src="attire/3.jpg" alt="Style 3"></div>
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(3)"><img
+                            src="attire/4.jpg" alt="Style 4"></div>
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(4)"><img
+                            src="attire/5.jpg" alt="Style 5"></div>
+                    <div class="arch-frame aspect-square cursor-pointer" onclick="openLightbox(5)"><img
+                            src="attire/6.jpg" alt="Style 6"></div>
+                </div>
+
+                <!-- REMINDER BANNER -->
+                <div class="mt-12 text-center border-t border-neutral-800/80 pt-8">
+                    <span
+                        class="text-xs font-sans uppercase tracking-[0.3em] text-neutral-400 font-bold block mb-1">Important
+                        Reminder</span>
+                    <p class="font-serif italic text-xl text-neutral-200">Strictly All Black Attire &bull; No Pop of
+                        Colors</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: GIFT GUIDE -->
+        <section id="gift-guide" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-white">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+
+                <!-- Header -->
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span
+                        class="text-xs uppercase tracking-[0.35em] text-neutral-500 font-sans font-bold block mb-2">Registry
+                        &amp; Well Wishes</span>
+                    <h2 class="font-display italic text-5xl md:text-6xl text-neutral-900 mb-6">Gift Guide</h2>
+                    <p class="font-serif italic text-xl text-neutral-700 leading-relaxed">
+                        With all that we have, we've been truly blessed. Your presence on our special day is the
+                        greatest gift of all. However, if you wish to honor us with a gift, a monetary blessing toward
+                        our future together would be deeply appreciated.
+                    </p>
+                </div>
+
+                <!-- QR Codes & Bank Details Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                    <!-- Mark Valles QR Card -->
+                    <div
+                        class="p-8 rounded-lg bg-[#fafafa] border border-neutral-200 text-center flex flex-col items-center justify-between transition-all hover:border-neutral-400">
+                        <div class="w-full">
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Union
+                                Bank</span>
+                            <h4 class="font-display text-2xl text-neutral-900 font-bold mb-6">Mark Valles</h4>
+
+                            <!-- QR Code Frame -->
+                            <div
+                                class="w-64 h-64 mx-auto bg-white p-3 rounded border border-neutral-300 shadow-sm mb-6 flex items-center justify-center overflow-hidden">
+                                <img src="qrcodes/qr1.jpg" alt="Mark Valles QR Code"
+                                    class="w-full h-full object-contain">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1 font-serif text-lg text-neutral-800">
+                            <p class="font-sans text-xs uppercase tracking-widest text-neutral-400">Account Name</p>
+                            <p class="font-bold">Mark Valles</p>
+                        </div>
+                    </div>
+
+                    <!-- Abegail Navarro QR Card (BPI) -->
+                    <div
+                        class="p-8 rounded-lg bg-[#fafafa] border border-neutral-200 text-center flex flex-col items-center justify-between transition-all hover:border-neutral-400">
+                        <div class="w-full">
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">BPI</span>
+                            <h4 class="font-display text-2xl text-neutral-900 font-bold mb-6">Abegail Navarro</h4>
+
+                            <!-- QR Code Frame (Zoomed with direct transform style) -->
+                            <div
+                                class="w-64 h-64 mx-auto bg-white p-3 rounded border border-neutral-300 shadow-sm mb-6 flex items-center justify-center overflow-hidden">
+                                <img src="qrcodes/qr2.jpg" alt="Abegail Navarro QR Code"
+                                    class="w-full h-full object-contain transition-transform"
+                                    style="transform: scale(1.6);">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1 font-serif text-lg text-neutral-800">
+                            <p class="font-sans text-xs uppercase tracking-widest text-neutral-400">Account Name</p>
+                            <p class="font-bold">Abegail Navarro</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 6: VENUE MAP SPREAD -->
+        <section id="venue-section" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                    <div class="lg:col-span-5" data-aos="fade-right">
+                        <span
+                            class="text-xs uppercase tracking-[0.3em] text-neutral-500 font-sans font-bold block mb-2">Location</span>
+                        <h2 class="font-display italic text-5xl text-neutral-900 mb-6">Venue &amp; Map</h2>
+                        <p class="font-serif text-2xl italic text-neutral-800 mb-6">Lola Café &mdash; S'Maison, Pasay
+                            City</p>
+                        <p class="text-neutral-600 text-lg mb-8">S'Maison, Conrad Manila, Seaside Blvd, Mall of Asia
+                            Complex, Pasay, Metro Manila</p>
+
+                        <a href="https://www.google.com/maps/place/LOLA+Cafe+-+S'Maison/@14.5311156,120.977497,17z"
+                            target="_blank" rel="noopener"
+                            class="inline-block bg-neutral-900 text-white font-sans text-xs uppercase tracking-[0.2em] font-bold px-8 py-4 rounded hover:bg-neutral-800 transition">
+                            Open in Google Maps &rarr;
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-7 h-[420px] rounded-lg overflow-hidden border border-neutral-300 shadow-xl"
+                        data-aos="fade-left">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.7583693427324!2d120.977497!3d14.5311156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbad5d53170b%3A0xa8220c7e3d5c1892!2sLOLA%20Cafe%20-%20S'Maison!5e0!3m2!1sen!2sph!4v1680000000000!5m2!1sen!2sph"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: GENTLE REMINDERS -->
+        <section id="reminders" class="w-full py-24 px-6 lg:px-16 border-b border-neutral-200 bg-[#f8f8f5]">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span
+                        class="text-xs uppercase tracking-[0.35em] text-neutral-500 font-sans font-bold block mb-2">Important
+                        Information</span>
+                    <h2 class="font-display italic text-5xl md:text-6xl text-neutral-900 mb-4">Gentle Reminders</h2>
+                    <p class="font-serif italic text-xl text-neutral-600">
+                        To help us make our special day as seamless and memorable as possible, we kindly ask for your
+                        cooperation with a few details.
+                    </p>
+                </div>
+
+                <!-- 2x2 Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- 1. Be On Time -->
+                    <div
+                        class="p-8 rounded-lg bg-white border border-neutral-200 flex flex-col justify-between transition-all hover:border-neutral-400 hover:shadow-md">
+                        <div>
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-400 block mb-3">01
+                                // Punctuality</span>
+                            <h3 class="font-display italic text-3xl text-neutral-900 mb-3">Be On Time</h3>
+                            <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+                                The ceremony will begin promptly at 5:00 PM. We kindly ask our guests to arrive by 4:00
+                                PM to allow time for seating and pre-ceremony preparations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. RSVP -->
+                    <div
+                        class="p-8 rounded-lg bg-white border border-neutral-200 flex flex-col justify-between transition-all hover:border-neutral-400 hover:shadow-md">
+                        <div>
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-400 block mb-3">02
+                                // Confirmation</span>
+                            <h3 class="font-display italic text-3xl text-neutral-900 mb-3">Strictly RSVP</h3>
+                            <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+                                Kindly confirm your attendance by November 26, 2026. Because seating and catering are
+                                strictly allocated per guest, an RSVP is required to reserve your seat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3. No Plus Ones -->
+                    <div
+                        class="p-8 rounded-lg bg-white border border-neutral-200 flex flex-col justify-between transition-all hover:border-neutral-400 hover:shadow-md">
+                        <div>
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-400 block mb-3">03
+                                // Exclusive Seats</span>
+                            <h3 class="font-display italic text-3xl text-neutral-900 mb-3">No Plus Ones</h3>
+                            <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+                                Due to intimate venue constraints, we can only accommodate guests formally listed on the
+                                invitation. We appreciate your understanding in keeping our celebration cozy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4. No Kids -->
+                    <div
+                        class="p-8 rounded-lg bg-white border border-neutral-200 flex flex-col justify-between transition-all hover:border-neutral-400 hover:shadow-md">
+                        <div>
+                            <span
+                                class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-400 block mb-3">04
+                                // Adults Only</span>
+                            <h3 class="font-display italic text-3xl text-neutral-900 mb-3">Adults-Only Affair</h3>
+                            <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+                                While we adore your little ones, our celebration will be an adults-only event (with the
+                                exception of children included in our wedding entourage).
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer
+            class="w-full py-12 px-6 lg:px-16 bg-[#f8f8f5] text-center text-xs font-sans uppercase tracking-[0.25em] text-neutral-500 border-t border-neutral-200">
+            <p>Mark &amp; Abegail Wedding &middot; January 26, 2027 &middot; Lola Café, S'Maison</p>
+        </footer>
+
+        <!-- Background Audio Element -->
+        <audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+
+        <!-- Floating Fixed CD Music Player (Bottom Right) -->
+        <div id="music-control" title="Toggle Music"
+            class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-white/80 backdrop-blur-md border border-neutral-300/80 px-4 py-2.5 rounded-full shadow-xl cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300 group">
+
+            <!-- Rotating CD Disc -->
+            <div id="cd-disc"
+                class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center relative overflow-hidden shadow-md transition-transform">
+                <!-- Vinyl Grooves Visual -->
+                <div class="absolute inset-0 rounded-full border border-white/10"></div>
+                <div class="absolute inset-1 rounded-full border border-white/10"></div>
+                <!-- CD Shine Rainbow Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent rounded-full pointer-events-none">
+                </div>
+                <!-- Center Hole -->
+                <div class="w-3 h-3 rounded-full bg-[#f8f8f5] border-2 border-neutral-800 z-10"></div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div class="photo-frame" data-aos="zoom-in">
-                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=700&q=80" alt="Memory 1">
-                    <p class="photo-caption">When we first met in 2021</p>
-                </div>
-
-                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Memory 2">
-                    <p class="photo-caption">Movie buddy days &amp; late chats</p>
-                </div>
-
-                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80" alt="Memory 3">
-                    <p class="photo-caption">Endless conversations</p>
-                </div>
-
-                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=700&q=80" alt="Memory 4">
-                    <p class="photo-caption">Finding our way to each other</p>
-                </div>
-
-                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80" alt="Memory 5">
-                    <p class="photo-caption">From friends to lovers</p>
-                </div>
-
-                <div class="photo-frame" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=700&q=80" alt="Memory 6">
-                    <p class="photo-caption">Ready for January 26, 2027</p>
-                </div>
+            <!-- Status Label -->
+            <div class="text-left font-sans pr-1 select-none">
+                <span class="block text-[9px] uppercase tracking-[0.25em] font-bold text-neutral-400">Soundtrack</span>
+                <span id="music-status"
+                    class="block font-serif italic text-sm text-neutral-900 font-semibold leading-tight">Play
+                    Music</span>
             </div>
         </div>
-    </section>
 
-    <!-- SECTION 9: WHITE (Footer) -->
-    <footer class="w-full bg-[#ffffff] text-[#111111] border-t border-neutral-200">
-        <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left accent-label accent-label-ink">
-            <span>Mark &amp; Abegail</span>
-            <span>Lola Café, S'Maison</span>
-            <span>January 26, 2027</span>
-        </div>
-        <div class="py-6 text-center border-t border-neutral-200 bg-[#f9f9f9]">
-            <p class="accent-label text-neutral-700" style="letter-spacing: 0.25em; font-size: 0.8rem;">Mark &amp; Abegail Wedding &middot; All Rights Reserved 2027</p>
-        </div>
-    </footer>
+    </div>
 
+    <!-- JAVASCRIPT LOGIC -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./invitees.js"></script>
     <script>
-        AOS.init({ duration: 700, once: true });
+        AOS.init({ duration: 800, once: true });
 
-        // Preloader transition script
-        window.addEventListener('load', function() {
-            setTimeout(function () {
-                var preloader = document.getElementById('preloader');
-                preloader.classList.add('fade-out');
-                document.body.classList.remove('preloading');
-            }, 2400); // 2.4s cinematic entry delay
+        // Preloader transition & Music Play on Click
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const enterBtn = document.getElementById('enter-btn');
+            const audio = document.getElementById('bg-music');
+            const musicControl = document.getElementById('music-control');
+            const cdDisc = document.getElementById('cd-disc');
+            const musicStatus = document.getElementById('music-status');
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.has('rsvp')) {
+                preloader.style.display = 'none';
+            }
+
+            if (urlParams.has('preloader_false')) {
+                preloader.style.display = 'none';
+            }
+
+            function updatePlayerUI(playing) {
+                if (playing) {
+                    if (cdDisc) {
+                        cdDisc.classList.add('animate-spin-cd');
+                        cdDisc.classList.remove('cd-paused');
+                    }
+                    if (musicStatus) musicStatus.textContent = 'Now Playing';
+                } else {
+                    if (cdDisc) cdDisc.classList.add('cd-paused');
+                    if (musicStatus) musicStatus.textContent = 'Paused';
+                }
+            }
+
+            function enterSiteAndPlayMusic(e) {
+                if (e) e.stopPropagation();
+
+                // 1. Play Audio
+                if (audio) {
+                    audio.play().then(() => {
+                        updatePlayerUI(true);
+                    }).catch(() => {
+                        updatePlayerUI(false);
+                    });
+                }
+
+                // 2. Fade Out & Remove Preloader
+                if (preloader) {
+                    preloader.classList.add('fade-out');
+                    document.body.classList.remove('preloading');
+
+                    // Hide completely after fade transition completes
+                    setTimeout(function () {
+                        preloader.style.display = 'none';
+                    }, 1200);
+                }
+            }
+
+            // Bind ONLY to the specific enter button
+            if (enterBtn) {
+                enterBtn.addEventListener('click', enterSiteAndPlayMusic, { once: true });
+            }
+
+            // Floating CD Manual Toggle
+            if (musicControl) {
+                musicControl.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    if (audio) {
+                        if (audio.paused) {
+                            audio.play().then(() => updatePlayerUI(true));
+                        } else {
+                            audio.pause();
+                            updatePlayerUI(false);
+                        }
+                    }
+                });
+            }
         });
-
-        // Attire Carousel Lightbox Data & Logic
+        // Lightbox carousel
         const attireItems = [
             { src: "attire/1.jpg", caption: "All-Black Formal Attire Reference 1" },
             { src: "attire/2.jpg", caption: "All-Black Formal Attire Reference 2" },
@@ -793,59 +1205,20 @@
             { src: "attire/6.jpg", caption: "All-Black Formal Attire Reference 6" }
         ];
 
-        let currentIndex = 0;
-
         function openLightbox(index) {
-            currentIndex = index;
-            updateLightboxContent();
+            const item = attireItems[index];
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-caption').textContent = item.caption;
             document.getElementById('lightbox-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             document.getElementById('lightbox-modal').classList.remove('active');
-            document.body.style.overflow = 'auto';
         }
 
-        function changeSlide(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) {
-                currentIndex = attireItems.length - 1;
-            } else if (currentIndex >= attireItems.length) {
-                currentIndex = 0;
-            }
-            updateLightboxContent();
-        }
-
-        function updateLightboxContent() {
-            const item = attireItems[currentIndex];
-            document.getElementById('lightbox-img').src = item.src;
-            document.getElementById('lightbox-caption').textContent = `${currentIndex + 1} / ${attireItems.length} — ${item.caption}`;
-        }
-
-        // Keyboard navigation for lightbox
-        document.addEventListener('keydown', function(e) {
-            if (!document.getElementById('lightbox-modal').classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') changeSlide(-1);
-            if (e.key === 'ArrowRight') changeSlide(1);
-        });
-
-        // Close when clicking backdrop
-        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
-        });
-
-        // ---------------------------------------------------------------
-        // RSVP: invitee lookup + confirmation modal
-        // The modal only ever appears when the page URL's ?rsvp= slug
-        // matches a record below. Any other URL (or none) shows the
-        // normal invitation page with no modal at all.
-        // ---------------------------------------------------------------
-
-
+        // RSVP logic
         function findInvitee(slug) {
-            return INVITEES.find(function (inv) { return inv.s === slug; }) || null;
+            return (typeof INVITEES !== 'undefined') ? INVITEES.find(function (inv) { return inv.s === slug; }) : null;
         }
 
         function rsvpStorageKey(slug) {
@@ -864,30 +1237,26 @@
             }
 
             document.getElementById('rsvp-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
         }
 
         function closeRsvpModal() {
             document.getElementById('rsvp-modal').classList.remove('active');
-            document.body.style.overflow = 'auto';
         }
 
         function showRsvpFormView() {
-            document.getElementById('rsvp-form-view').style.display = 'block';
-            document.getElementById('rsvp-confirm-view').style.display = 'none';
+            document.getElementById('rsvp-form-view').classList.remove('hidden');
+            document.getElementById('rsvp-confirm-view').classList.add('hidden');
         }
 
         function showRsvpConfirmView(invitee, answer) {
             const text = answer === 'yes'
-                ? "We've marked you down as attending. We can't wait to celebrate with you!"
-                : "We've noted that you won't be able to join us. You'll be missed!";
+                ? "We've marked you down as attending. We look forward to celebrating with you!"
+                : "We've noted that you won't be able to join us. You will be missed!";
             document.getElementById('rsvp-confirm-text').textContent = text;
-            document.getElementById('rsvp-form-view').style.display = 'none';
-            document.getElementById('rsvp-confirm-view').style.display = 'block';
+            document.getElementById('rsvp-form-view').classList.add('hidden');
+            document.getElementById('rsvp-confirm-view').classList.remove('hidden');
         }
 
-        // Paste your deployed Google Apps Script Web App URL here
-        // (Deploy > New deployment > Web app > Execute as: Me > Who has access: Anyone)
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxXxnctvouYVov0L-Uo6-L2d6oYa54ZomyvhwTuBGWL7b2BfoL4jECoqhEyTLvtOcII/exec";
 
         function submitRsvp() {
@@ -896,13 +1265,12 @@
             const errorEl = document.getElementById('rsvp-error');
             const submitBtn = document.getElementById('rsvp-submit-btn');
 
-            errorEl.style.display = 'none';
+            errorEl.classList.add('hidden');
 
             if (!answer) {
                 select.style.borderColor = '#b00020';
                 return;
             }
-            select.style.borderColor = '';
 
             const invitee = findInvitee(currentInviteeSlug);
             if (!invitee) return;
@@ -918,30 +1286,24 @@
 
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
-                // text/plain avoids a CORS preflight (OPTIONS) request, which
-                // Apps Script web apps don't handle. Apps Script still parses
-                // this fine via JSON.parse(e.postData.contents).
                 headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                 body: JSON.stringify(payload)
             })
-                .then(function (res) { return res.json(); })
-                .then(function (result) {
+                .then(res => res.json())
+                .then(result => {
                     if (result.result === 'success') {
                         localStorage.setItem(rsvpStorageKey(currentInviteeSlug), answer);
                         showRsvpConfirmView(invitee, answer);
-                    } else if (result.result === 'not_found') {
-                        errorEl.textContent = "We couldn't find your name on the guest list. Please contact the couple directly.";
-                        errorEl.style.display = 'block';
                     } else {
-                        errorEl.textContent = 'Something went wrong. Please try again in a moment.';
-                        errorEl.style.display = 'block';
+                        errorEl.textContent = 'Something went wrong. Please try again.';
+                        errorEl.classList.remove('hidden');
                     }
                 })
-                .catch(function () {
-                    errorEl.textContent = 'Could not reach the server. Please check your connection and try again.';
-                    errorEl.style.display = 'block';
+                .catch(() => {
+                    errorEl.textContent = 'Could not reach server. Please check your connection.';
+                    errorEl.classList.remove('hidden');
                 })
-                .finally(function () {
+                .finally(() => {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Confirm RSVP';
                 });
@@ -959,37 +1321,14 @@
             if (!slug) return;
 
             const invitee = findInvitee(slug);
-            if (!invitee) return; // no match -> page behaves exactly as normal, no modal
+            if (!invitee) return;
 
             currentInviteeSlug = slug;
-            // Wait for the preloader to clear before revealing the modal
             window.addEventListener('load', function () {
-                setTimeout(function () { openRsvpModal(invitee); }, 2500);
+                setTimeout(function () { openRsvpModal(invitee); }, 1000);
             });
         })();
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const rsvpEditBtn = document.getElementById('rsvp-edit-btn');
-    
-    if (rsvpEditBtn) {
-        const current_date = new Date();
-        const year = current_date.getFullYear();
-        const month = String(current_date.getMonth() + 1).padStart(2, '0');
-        const day = String(current_date.getDate()).padStart(2, '0');
-        const formattedDate = `${year}-${month}-${day}`;
-        
-        const deadlineDate = '2026-09-26';
-        
-        if (formattedDate === deadlineDate) {
-            const messageElement = document.createElement('p');
-            messageElement.className = 'text-red-600 text-sm font-medium'; // Mabalin nga i-edit ti classes base iti kayatmo
-            messageElement.textContent = `You cannot change response now. Deadline is ${deadlineDate}.`;
-            
-            rsvpEditBtn.parentNode.replaceChild(messageElement, rsvpEditBtn);
-        }
-    }
-});
     </script>
 </body>
+
 </html>
