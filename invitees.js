@@ -1,9 +1,3 @@
-// ===== GLOBAL RSVP SETTINGS =====
-// Last moment guests may RSVP (inclusive). After this, the RSVP modal switches
-// to a "closed" message and responses can no longer be submitted or changed.
-// Use ISO format with timezone offset (+08:00 = Philippine Time).
-const RSVP_DUE_DATE = new Date('2026-12-15T23:59:59+08:00');
-
 const INVITEES = [
     {s: "paul-michael-parido-zbik", f: "Paul Michael", l: "Parido"},
     {s: "camille-parido-cidk", f: "Camille", l: "Parido"},
