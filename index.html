@@ -329,6 +329,17 @@
                 <p id="rsvp-error" class="hidden text-red-600 text-sm mt-3"></p>
             </div>
 
+            <div id="rsvp-closed-view" class="hidden">
+                <span class="text-xs uppercase tracking-[0.3em] text-neutral-500 font-sans font-bold">Wedding
+                    Invitation</span>
+                <h3 class="font-display italic text-4xl text-neutral-900 mt-2 mb-1">RSVP Closed</h3>
+                <p class="font-display italic text-2xl text-neutral-800 mb-3" id="rsvp-closed-name">&nbsp;</p>
+                <p class="text-neutral-600 text-lg font-serif mb-6" id="rsvp-closed-text"></p>
+                <a href="index.html?preloader_false"><button
+                        class="text-xs uppercase tracking-[0.15em] font-sans font-bold text-blue-800 underline">VIEW
+                        WEDDING DETAILS</button></a>
+            </div>
+
             <div id="rsvp-confirm-view" class="hidden">
                 <h3 class="font-display italic text-4xl text-neutral-900 mb-2">Thank You</h3>
                 <p class="font-display italic text-2xl text-neutral-800 mb-3" id="rsvp-confirm-name">&nbsp;</p>
@@ -756,7 +767,7 @@
                     <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up">
                         <span
                             class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">The
-                            Couple &amp; Honours</span>
+                            Parents</span>
 
                         <div class="space-y-6">
 
@@ -780,7 +791,8 @@
                     <!-- Bride's Side -->
                     <div class="entourage-card p-8 rounded-lg bg-[#fafafa]" data-aos="fade-up" data-aos-delay="100">
                         <span
-                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Bride
+                            class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Best
+                            Men
                             &amp; Maids of Honor</span>
 
                         <div class="space-y-6">
@@ -894,12 +906,12 @@
 
                         <div
                             class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
-                            <span>Imelda &amp; De Mesa</span>
+                            <span>Imelda De Mesa</span>
                         </div>
 
                         <div
                             class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
-                            <span>Tita Jane &amp; Tito Marlo</span>
+                            <span>Jane &amp; Marlo Sarzate</span>
                         </div>
 
                         <!-- Single -->
@@ -911,7 +923,11 @@
                         <!-- Pair (Overseas) -->
                         <div
                             class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
-                            <span>Edwin Lamug &amp; Olivia Lamug</span>
+                            <span>Edwin &amp; Olivia Lamug</span>
+                        </div>
+                        <div
+                            class="p-4 bg-white rounded border border-neutral-200 flex flex-col items-center justify-center min-h-[72px]">
+                            <span>Feliciano Lamug</span>
                         </div>
                     </div>
                 </div>
@@ -987,8 +1003,6 @@
                             <span
                                 class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">Union
                                 Bank</span>
-                            <h4 class="font-display text-2xl text-neutral-900 font-bold mb-6">Mark Valles</h4>
-
                             <!-- QR Code Frame -->
                             <div
                                 class="w-64 h-64 mx-auto bg-white p-3 rounded border border-neutral-300 shadow-sm mb-6 flex items-center justify-center overflow-hidden">
@@ -1009,7 +1023,6 @@
                         <div class="w-full">
                             <span
                                 class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-500 block mb-4 pb-2 border-b border-neutral-200">BPI</span>
-                            <h4 class="font-display text-2xl text-neutral-900 font-bold mb-6">Abegail Navarro</h4>
 
                             <!-- QR Code Frame (Zoomed with direct transform style) -->
                             <div
@@ -1092,7 +1105,7 @@
                                 // Punctuality</span>
                             <h3 class="font-display italic text-3xl text-neutral-900 mb-3">Be On Time</h3>
                             <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
-                                The ceremony will begin promptly at 5:00 PM. We kindly ask our guests to arrive by 4:00
+                                We kindly ask our guests to arrive by 4:00
                                 PM to allow time for seating and pre-ceremony preparations.
                             </p>
                         </div>
@@ -1106,10 +1119,9 @@
                                 class="text-xs uppercase tracking-[0.2em] font-sans font-bold text-neutral-400 block mb-3">02
                                 // Confirmation</span>
                             <h3 class="font-display italic text-3xl text-neutral-900 mb-3">Strictly RSVP</h3>
-                            <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
-                                Kindly confirm your attendance by November 26, 2026. Because seating and catering are
-                                strictly allocated per guest, an RSVP is required to reserve your seat.
-                            </p>
+
+
+                            <div id="reminder-container"></div>
                         </div>
                     </div>
 
@@ -1191,6 +1203,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./invitees.js"></script>
     <script>
+
+        function isRsvpClosed() {
+            return new Date() > RSVP_DUE_DATE;
+        }
+
+        function formatRsvpDueDate() {
+            return RSVP_DUE_DATE.toLocaleDateString('en-US', {
+                month: 'long', day: 'numeric', year: 'numeric', timeZone: 'Asia/Manila'
+            });
+        }
+
         AOS.init({ duration: 800, once: true });
 
         // Preloader transition & Music Play on Click
@@ -1302,10 +1325,13 @@
         function openRsvpModal(invitee) {
             document.getElementById('rsvp-guest-name').textContent = invitee.f + ' ' + invitee.l;
             document.getElementById('rsvp-confirm-name').textContent = invitee.f + ' ' + invitee.l;
+            document.getElementById('rsvp-closed-name').textContent = invitee.f + ' ' + invitee.l;
 
             const saved = localStorage.getItem(rsvpStorageKey(invitee.s));
             if (saved) {
                 showRsvpConfirmView(invitee, saved);
+            } else if (isRsvpClosed()) {
+                showRsvpClosedView();
             } else {
                 showRsvpFormView();
             }
@@ -1318,22 +1344,46 @@
         }
 
         function showRsvpFormView() {
+            if (isRsvpClosed()) { showRsvpClosedView(); return; }
             document.getElementById('rsvp-form-view').classList.remove('hidden');
             document.getElementById('rsvp-confirm-view').classList.add('hidden');
+            document.getElementById('rsvp-closed-view').classList.add('hidden');
+        }
+
+        function showRsvpClosedView() {
+            document.getElementById('rsvp-closed-text').textContent =
+                'We\'re sorry, but the RSVP period ended on ' + formatRsvpDueDate() +
+                ', so we are no longer accepting responses. If you have any concerns, please reach out to Mark or Abegail directly.';
+            document.getElementById('rsvp-form-view').classList.add('hidden');
+            document.getElementById('rsvp-confirm-view').classList.add('hidden');
+            document.getElementById('rsvp-closed-view').classList.remove('hidden');
         }
 
         function showRsvpConfirmView(invitee, answer) {
+            const parts = invitee.l.split("with ");
+            const seatcount = parts.length > 1 ? Number(parts[1].split(" ")[0]) : 0;
+            const totalSeats = seatcount + 1;
+
             const text = answer === 'yes'
-                ? "We've marked you down as attending. We look forward to celebrating with you!"
+                ? `We've marked you down as attending and reserved <span style="font-weight:bold;color:#555">${totalSeats}</span> seats. We look forward to celebrating with you!`
                 : "We've noted that you won't be able to join us. You will be missed!";
-            document.getElementById('rsvp-confirm-text').textContent = text;
+
+            document.getElementById('rsvp-confirm-text').innerHTML = text;
             document.getElementById('rsvp-form-view').classList.add('hidden');
+            document.getElementById('rsvp-closed-view').classList.add('hidden');
             document.getElementById('rsvp-confirm-view').classList.remove('hidden');
+
+            // After the due date, guests who already responded can no longer change their answer
+            const editBtn = document.getElementById('rsvp-edit-btn');
+            editBtn.classList.toggle('hidden', isRsvpClosed());
+            editBtn.nextElementSibling.classList.toggle('hidden', isRsvpClosed()); // the <br> after it
         }
 
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxXxnctvouYVov0L-Uo6-L2d6oYa54ZomyvhwTuBGWL7b2BfoL4jECoqhEyTLvtOcII/exec";
 
         function submitRsvp() {
+            if (isRsvpClosed()) { showRsvpClosedView(); return; }
+
             const select = document.getElementById('rsvp-select');
             const answer = select.value;
             const errorEl = document.getElementById('rsvp-error');
@@ -1384,6 +1434,7 @@
         }
 
         function editRsvp() {
+            if (isRsvpClosed()) { showRsvpClosedView(); return; }
             showRsvpFormView();
         }
 
@@ -1402,6 +1453,20 @@
                 setTimeout(function () { openRsvpModal(invitee); }, 1000);
             });
         })();
+    </script>
+    <script>
+        const formattedDate = RSVP_DUE_DATE.toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        document.getElementById('reminder-container').innerHTML = `
+    <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+        Kindly confirm your attendance by ${formattedDate}. Because seating and catering are
+        strictly allocated per guest, an RSVP is required to reserve your seat.
+    </p>
+`;
     </script>
 </body>
 
