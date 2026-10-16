@@ -1378,8 +1378,13 @@
 
         function showRsvpConfirmView(invitee, answer) {
             const parts = invitee.l.split("with ");
+            const and_indicator = invitee.l.split("and ");
             const seatcount = parts.length > 1 ? Number(parts[1].split(" ")[0]) : 0;
-            const totalSeats = seatcount + 1;
+            let totalSeats = seatcount + 1;
+
+            if (and_indicator.length > 1) {
+                totalSeats = 2;
+            }
 
             const text = answer === 'yes'
                 ? `We've marked you down as attending and reserved <span style="font-weight:bold;color:#555">${totalSeats}</span> ${totalSeats === 1 ? 'seat' : 'seats'}. We look forward to celebrating with you!`

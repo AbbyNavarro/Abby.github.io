@@ -1,8 +1,7 @@
-
 const INVITEES = [
     {s: "paul-michael-parido-zbik", f: "Paul Michael", l: "Parido"},
     {s: "camille-parido-cidk", f: "Camille", l: "Parido"},
-    {s: "carmelita-parido-ujv6", f: "Carmelita", l: "Parido"},
+    {s: "carmelita-valles-ujv6", f: "Carmelita", l: "Valles"},
     {s: "gabriel-and-shane-valles-j7xv", f: "Gabriel and Shane", l: "Valles"},
     {s: "maximo-and-gail-miel-9xuy", f: "Maximo and Gail", l: "Miel"},
     {s: "mhelda-valles-ljh7", f: "Mhelda", l: "Valles"},
@@ -43,5 +42,6 @@ const INVITEES = [
     {s: "den-and-lorevil-trinidad-pac5", f: "Den and Lorevil", l: "Trinidad"},
     {s: "marlo-and-jane-zarzate-6t4u", f: "Marlo and Jane", l: "Zarzate"},
     {s: "norma-lopez-246h", f: "Norma", l: "Lopez"},
-    {s: "leila-ventura-id25", f: "Leila", l: "Ventura"}
+    {s: "leila-ventura-id25", f: "Leila", l: "Ventura"},
+    {s: "catherine-oiaso-k2m9", f: "Catherine", l: "OIaso"}
 ];
