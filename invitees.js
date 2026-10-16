@@ -1,3 +1,4 @@
+
 const INVITEES = [
     {s: "paul-michael-parido-zbik", f: "Paul Michael", l: "Parido"},
     {s: "camille-parido-cidk", f: "Camille", l: "Parido"},
