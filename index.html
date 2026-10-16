@@ -1382,7 +1382,7 @@
             const totalSeats = seatcount + 1;
 
             const text = answer === 'yes'
-                ? `We've marked you down as attending and reserved <span style="font-weight:bold;color:#555">${totalSeats}</span> seats. We look forward to celebrating with you!`
+                ? `We've marked you down as attending and reserved <span style="font-weight:bold;color:#555">${totalSeats}</span> ${totalSeats === 1 ? 'seat' : 'seats'}. We look forward to celebrating with you!`
                 : "We've noted that you won't be able to join us. You will be missed!";
 
             document.getElementById('rsvp-confirm-text').innerHTML = text;
