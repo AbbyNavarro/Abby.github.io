@@ -1204,6 +1204,19 @@
     <script src="./invitees.js"></script>
     <script>
 
+        const formattedDate = RSVP_DUE_DATE.toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        document.getElementById('reminder-container').innerHTML = `
+        <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
+            Kindly confirm your attendance by ${formattedDate}. Because seating and catering are
+            strictly allocated per guest, an RSVP is required to reserve your seat.
+        </p>`;
+
+
         function isRsvpClosed() {
             return new Date() > RSVP_DUE_DATE;
         }
@@ -1453,20 +1466,6 @@
                 setTimeout(function () { openRsvpModal(invitee); }, 1000);
             });
         })();
-    </script>
-    <script>
-        const formattedDate = RSVP_DUE_DATE.toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-        });
-
-        document.getElementById('reminder-container').innerHTML = `
-    <p class="font-serif italic text-lg text-neutral-700 leading-relaxed">
-        Kindly confirm your attendance by ${formattedDate}. Because seating and catering are
-        strictly allocated per guest, an RSVP is required to reserve your seat.
-    </p>
-`;
     </script>
 </body>
 
