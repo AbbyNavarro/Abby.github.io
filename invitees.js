@@ -37,7 +37,7 @@ const INVITEES = [
     {s: "mikaely-aroen-mejia-xa3k", f: "Mikaely Aroen", l: "Mejia"},
     {s: "camille-silva-x7ee", f: "Camille", l: "Silva"},
     {s: "marie-gay-lontoc-dtjv", f: "Marie Gay", l: "Lontoc"},
-    {s: "rachelle-lacaste-zhwj", f: "Rachelle", l: "Lacaste"},
+    {s: "rachelle-lacaste-zhwj", f: "Rachelle", l: "Aydalla"},
     {s: "gaynord-lamug-and-jaira-rivera-r64d", f: "Gaynord", l: "Lamug and Jaira Rivera"},
     {s: "den-and-lorevil-trinidad-pac5", f: "Den and Lorevil", l: "Trinidad"},
     {s: "marlo-and-jane-zarzate-6t4u", f: "Marlo and Jane", l: "Zarzate"},
