@@ -9,7 +9,7 @@ const INVITEES = [
     {s: "joven-macavinta-with-1-companion-oh9s", f: "Joven", l: "Macavinta with 1 companion"},
     {s: "erwin-and-cresilda-sasotona-2pcn", f: "Erwin and Cresilda", l: "Sasotona"},
     {s: "wennie-and-lanie-sasotona-azyt", f: "Wennie and Lanie", l: "Sasotona"},
-    {s: "cerelo-valles-q85j", f: "Cerelo", l: "Valles"},
+    {s: "cerelo-valles-q85j", f: "Cirilo", l: "Valles"},
     {s: "flor-benjamin-with-1-companion-sg65", f: "Flor", l: "Benjamin with 1 companion"},
     {s: "brian-garrido-and-belle-gregorio-1t2t", f: "Brian", l: "Garrido and Belle Gregorio"},
     {s: "vince-and-mavy-oliva-53lc", f: "Vince and Mavy", l: "Oliva"},
